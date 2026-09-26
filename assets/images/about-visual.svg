@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 420" width="100%" height="100%">
+  <defs>
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#03A791" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#81E7AF" stop-opacity="0.04"/>
+    </linearGradient>
+    <linearGradient id="layerGrad1" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#03A791"/>
+      <stop offset="100%" stop-color="#028574"/>
+    </linearGradient>
+    <linearGradient id="layerGrad2" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#255F38"/>
+      <stop offset="100%" stop-color="#1F7D53"/>
+    </linearGradient>
+    <linearGradient id="accentLineGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#81E7AF"/>
+      <stop offset="100%" stop-color="#03A791"/>
+    </linearGradient>
+    <filter id="subtleShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="6" stdDeviation="10" flood-color="#03A791" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+
+  <!-- Outer Canvas Card -->
+  <rect x="15" y="15" width="490" height="390" rx="20" fill="url(#cardGrad)" stroke="#03A791" stroke-width="1.5" stroke-opacity="0.25"/>
+
+  <!-- Header Bar -->
+  <rect x="15" y="15" width="490" height="44" rx="20" fill="#03A791" fill-opacity="0.08"/>
+  <circle cx="45" cy="37" r="6" fill="#FF5F56"/>
+  <circle cx="65" cy="37" r="6" fill="#FFBD2E"/>
+  <circle cx="85" cy="37" r="6" fill="#27C93F"/>
+  <text x="260" y="42" fill="#03A791" font-family="'JetBrains Mono', monospace" font-size="13" font-weight="600" text-anchor="middle">flutter_architecture_overview.dart</text>
+
+  <!-- Layer 1: Presentation (UI & Cubit) -->
+  <g transform="translate(45, 80)" filter="url(#subtleShadow)">
+    <rect width="430" height="82" rx="14" fill="#FFFFFF" stroke="#03A791" stroke-width="1.5"/>
+    <rect x="0" y="0" width="8" height="82" rx="4" fill="url(#layerGrad1)"/>
+    <text x="28" y="32" fill="#0F172A" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="15" font-weight="700">Presentation Layer</text>
+    <text x="28" y="52" fill="#64748B" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="12">Responsive Flutter Widgets &amp; Reactive UI</text>
+    
+    <!-- Badges -->
+    <rect x="235" y="24" width="80" height="32" rx="8" fill="#E9F5BE" stroke="#81E7AF" stroke-width="1"/>
+    <text x="275" y="44" fill="#134E3C" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="600" text-anchor="middle">Flutter UI</text>
+    
+    <rect x="325" y="24" width="90" height="32" rx="8" fill="#03A791" fill-opacity="0.12" stroke="#03A791" stroke-width="1"/>
+    <text x="370" y="44" fill="#03A791" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="700" text-anchor="middle">Cubit / BLoC</text>
+  </g>
+
+  <!-- Connecting Arrows 1 -->
+  <g transform="translate(260, 162)">
+    <line x1="0" y1="0" x2="0" y2="24" stroke="url(#accentLineGrad)" stroke-width="2.5" stroke-dasharray="4 3"/>
+    <polygon points="-4,22 4,22 0,28" fill="#03A791"/>
+  </g>
+
+  <!-- Layer 2: Business & Architecture (MVVM / State) -->
+  <g transform="translate(45, 192)" filter="url(#subtleShadow)">
+    <rect width="430" height="82" rx="14" fill="#FFFFFF" stroke="#81E7AF" stroke-width="1.5"/>
+    <rect x="0" y="0" width="8" height="82" rx="4" fill="#81E7AF"/>
+    <text x="28" y="32" fill="#0F172A" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="15" font-weight="700">Domain &amp; Logic Layer</text>
+    <text x="28" y="52" fill="#64748B" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="12">MVVM Design Pattern, Use Cases &amp; State Events</text>
+    
+    <!-- Badges -->
+    <rect x="235" y="24" width="80" height="32" rx="8" fill="#F1F5F9" stroke="#CBD5E1" stroke-width="1"/>
+    <text x="275" y="44" fill="#334155" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="600" text-anchor="middle">MVVM</text>
+    
+    <rect x="325" y="24" width="90" height="32" rx="8" fill="#81E7AF" fill-opacity="0.25" stroke="#81E7AF" stroke-width="1"/>
+    <text x="370" y="44" fill="#0E3725" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="700" text-anchor="middle">Clean Code</text>
+  </g>
+
+  <!-- Connecting Arrows 2 -->
+  <g transform="translate(260, 274)">
+    <line x1="0" y1="0" x2="0" y2="24" stroke="url(#accentLineGrad)" stroke-width="2.5" stroke-dasharray="4 3"/>
+    <polygon points="-4,22 4,22 0,28" fill="#03A791"/>
+  </g>
+
+  <!-- Layer 3: Data Layer (APIs, Firebase, SQLite) -->
+  <g transform="translate(45, 304)" filter="url(#subtleShadow)">
+    <rect width="430" height="84" rx="14" fill="#FFFFFF" stroke="#03A791" stroke-width="1.5"/>
+    <rect x="0" y="0" width="8" height="84" rx="4" fill="url(#layerGrad2)"/>
+    <text x="28" y="32" fill="#0F172A" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="15" font-weight="700">Data &amp; Persistence Layer</text>
+    <text x="28" y="52" fill="#64748B" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="12">REST APIs (JSON), Cloud Firestore &amp; Local SQLite</text>
+    
+    <!-- Mini Badges -->
+    <rect x="235" y="26" width="60" height="30" rx="6" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1"/>
+    <text x="265" y="45" fill="#03A791" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="700" text-anchor="middle">REST</text>
+
+    <rect x="302" y="26" width="60" height="30" rx="6" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1"/>
+    <text x="332" y="45" fill="#FF9100" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="700" text-anchor="middle">Firebase</text>
+
+    <rect x="369" y="26" width="50" height="30" rx="6" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1"/>
+    <text x="394" y="45" fill="#008080" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="700" text-anchor="middle">SQLite</text>
+  </g>
+</svg>

@@ -1,0 +1,105 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 380" width="100%" height="100%">
+  <defs>
+    <linearGradient id="newsBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#1E293B"/>
+    </linearGradient>
+    <linearGradient id="newsHeader" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#03A791"/>
+      <stop offset="100%" stop-color="#027566"/>
+    </linearGradient>
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1E293B"/>
+      <stop offset="100%" stop-color="#0F172A"/>
+    </linearGradient>
+    <filter id="phoneShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#000000" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+
+  <!-- Background presentation container -->
+  <rect width="600" height="380" fill="url(#newsBg)" rx="16"/>
+  
+  <!-- Subtle decorative ambient background lines -->
+  <circle cx="500" cy="80" r="160" fill="#03A791" opacity="0.08"/>
+  <circle cx="80" cy="300" r="140" fill="#81E7AF" opacity="0.05"/>
+
+  <!-- Left: Featured highlights / Architecture badges -->
+  <g transform="translate(40, 60)">
+    <text x="0" y="30" fill="#81E7AF" font-family="'JetBrains Mono', monospace" font-size="12" font-weight="700" letter-spacing="1.5">FLUTTER • MVVM • CUBIT</text>
+    <text x="0" y="70" fill="#FFFFFF" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="28" font-weight="800">News App</text>
+    <text x="0" y="105" fill="#94A3B8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14">
+      <tspan x="0" dy="0">Real-time REST API news feed</tspan>
+      <tspan x="0" dy="24">with category filters, Cubit state,</tspan>
+      <tspan x="0" dy="24">&amp; offline cache persistence.</tspan>
+    </text>
+
+    <!-- Mini Feature Badges -->
+    <g transform="translate(0, 185)">
+      <rect width="105" height="30" rx="15" fill="#03A791" fill-opacity="0.2" stroke="#03A791" stroke-width="1"/>
+      <text x="52" y="20" fill="#81E7AF" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="600" text-anchor="middle">REST API</text>
+      
+      <rect x="115" width="85" height="30" rx="15" fill="#03A791" fill-opacity="0.2" stroke="#03A791" stroke-width="1"/>
+      <text x="157" y="20" fill="#81E7AF" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="600" text-anchor="middle">Cubit</text>
+
+      <rect y="40" width="130" height="30" rx="15" fill="#03A791" fill-opacity="0.2" stroke="#03A791" stroke-width="1"/>
+      <text x="65" y="60" fill="#81E7AF" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="600" text-anchor="middle">SharedPreferences</text>
+    </g>
+  </g>
+
+  <!-- Right: Sleek Mobile Phone Mockup -->
+  <g transform="translate(340, 24)" filter="url(#phoneShadow)">
+    <!-- Phone Bezel -->
+    <rect width="210" height="332" rx="32" fill="#0B131B" stroke="#334155" stroke-width="4"/>
+    <!-- Screen -->
+    <rect x="8" y="8" width="194" height="316" rx="24" fill="#0F172A"/>
+
+    <!-- Dynamic Island / Notch -->
+    <rect x="75" y="14" width="60" height="12" rx="6" fill="#000000"/>
+    <circle cx="120" cy="20" r="3" fill="#1E293B"/>
+
+    <!-- App Top Bar -->
+    <rect x="8" y="32" width="194" height="42" fill="url(#newsHeader)"/>
+    <text x="24" y="58" fill="#FFFFFF" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="13" font-weight="700">Flutter News</text>
+    <circle cx="180" cy="53" r="10" fill="#FFFFFF" fill-opacity="0.2"/>
+    <circle cx="180" cy="53" r="4" fill="#FFFFFF"/>
+
+    <!-- Category Pills -->
+    <g transform="translate(18, 82)">
+      <rect width="45" height="20" rx="10" fill="#03A791"/>
+      <text x="22" y="14" fill="#FFFFFF" font-size="9" font-family="sans-serif" font-weight="600" text-anchor="middle">Tech</text>
+      
+      <rect x="52" width="55" height="20" rx="10" fill="#1E293B"/>
+      <text x="79" y="14" fill="#94A3B8" font-size="9" font-family="sans-serif" font-weight="500" text-anchor="middle">Business</text>
+
+      <rect x="114" width="55" height="20" rx="10" fill="#1E293B"/>
+      <text x="141" y="14" fill="#94A3B8" font-size="9" font-family="sans-serif" font-weight="500" text-anchor="middle">Science</text>
+    </g>
+
+    <!-- Featured Breaking News Card -->
+    <g transform="translate(18, 112)">
+      <rect width="174" height="96" rx="12" fill="#1E293B" stroke="#334155" stroke-width="1"/>
+      <!-- Mock Hero Image Area -->
+      <rect x="6" y="6" width="162" height="48" rx="8" fill="#03A791" fill-opacity="0.3"/>
+      <text x="14" y="24" fill="#81E7AF" font-size="8" font-weight="700" font-family="sans-serif">BREAKING NEWS</text>
+      <text x="14" y="38" fill="#FFFFFF" font-size="10" font-weight="600" font-family="sans-serif">Flutter 3.x Announced</text>
+      <!-- Meta -->
+      <text x="10" y="68" fill="#E2E8F0" font-size="9" font-weight="600" font-family="sans-serif">New engine benchmarks &amp; web speed</text>
+      <text x="10" y="86" fill="#64748B" font-size="8" font-family="sans-serif">2 hours ago • TechCrunch</text>
+    </g>
+
+    <!-- News List Item 1 -->
+    <g transform="translate(18, 218)">
+      <rect width="174" height="48" rx="10" fill="#1E293B" stroke="#334155" stroke-width="1"/>
+      <rect x="8" y="8" width="32" height="32" rx="6" fill="#03A791" fill-opacity="0.25"/>
+      <text x="48" y="22" fill="#FFFFFF" font-size="8.5" font-weight="600" font-family="sans-serif">Clean Architecture in Dart</text>
+      <text x="48" y="36" fill="#64748B" font-size="7.5" font-family="sans-serif">State handling with Cubit</text>
+    </g>
+
+    <!-- Bottom Nav Bar -->
+    <rect x="8" y="280" width="194" height="44" fill="#0B131B"/>
+    <circle cx="50" cy="300" r="5" fill="#03A791"/>
+    <circle cx="105" cy="300" r="4" fill="#475569"/>
+    <circle cx="160" cy="300" r="4" fill="#475569"/>
+  </g>
+</svg>

@@ -1,0 +1,60 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 4 0 R >> >> /Contents 5 0 R >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+endobj
+5 0 obj
+<< /Length 680 >>
+stream
+BT
+/F1 24 Tf
+50 720 Td
+(Mohamed Zakaria) Tj
+/F1 14 Tf
+0 -24 Td
+(Flutter Developer | Mobile App Developer) Tj
+/F1 11 Tf
+0 -36 Td
+(Education: Computer and Systems Engineering - Zagazig University) Tj
+0 -18 Td
+(Academic Grade: Very Good) Tj
+0 -36 Td
+(Skills:) Tj
+0 -18 Td
+(- Flutter, Dart, Firebase, SQLite, REST APIs, JSON, Git, GitHub) Tj
+0 -18 Td
+(- MVVM Architecture, Cubit / BLoC State Management, Shared Preferences) Tj
+0 -18 Td
+(- Problem Solving, Teamwork, Communication, Continuous Learning) Tj
+0 -36 Td
+(Experience:) Tj
+0 -18 Td
+(- Freelance / Self-employed Flutter Developer) Tj
+0 -18 Td
+(- Freelance Developer on Upwork and Khamsat) Tj
+0 -36 Td
+(Portfolio CV - Replace with your full official resume) Tj
+ET
+endstream
+endobj
+xref
+0 6
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000115 00000 n 
+0000000244 00000 n 
+0000000325 00000 n 
+trailer
+<< /Size 6 /Root 1 0 R >>
+startxref
+1056
+%%EOF
