@@ -1,212 +1,1788 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- SEO Meta Tags -->
+    <title>Mohamed Zakaria — Flutter Developer | Mobile App Developer</title>
+    <meta
+      name="description"
+      content="Personal portfolio of Mohamed Zakaria, a junior Flutter Developer and Computer & Systems Engineering student at Zagazig University specializing in Dart, MVVM, Cubit, Firebase, and REST API mobile applications."
+    />
+    <meta
+      name="keywords"
+      content="Mohamed Zakaria, Flutter Developer, Dart, Mobile App Developer, Computer and Systems Engineering, Zagazig University, MVVM, Cubit, SQLite, Firebase, REST APIs"
+    />
+    <meta name="author" content="Mohamed Zakaria" />
+    <meta name="robots" content="index, follow" />
 
-  <!-- SEO Meta Tags -->
-  <title>Mohamed Zakaria — Flutter Developer | Mobile App Developer</title>
-  <meta name="description"
-    content="Personal portfolio of Mohamed Zakaria, a junior Flutter Developer and Computer & Systems Engineering student at Zagazig University specializing in Dart, MVVM, Cubit, Firebase, and REST API mobile applications.">
-  <meta name="keywords"
-    content="Mohamed Zakaria, Flutter Developer, Dart, Mobile App Developer, Computer and Systems Engineering, Zagazig University, MVVM, Cubit, SQLite, Firebase, REST APIs">
-  <meta name="author" content="Mohamed Zakaria">
-  <meta name="robots" content="index, follow">
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://mohamedzakaria.dev/" />
+    <meta property="og:title" content="Mohamed Zakaria — Flutter Developer" />
+    <meta
+      property="og:description"
+      content="Building modern mobile applications with Flutter, Dart, Clean Architecture, and responsive UI."
+    />
+    <meta property="og:image" content="assets/images/profile-avatar.svg" />
 
-  <!-- Open Graph / Facebook -->
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://mohamedzakaria.dev/">
-  <meta property="og:title" content="Mohamed Zakaria — Flutter Developer">
-  <meta property="og:description"
-    content="Building modern mobile applications with Flutter, Dart, Clean Architecture, and responsive UI.">
-  <meta property="og:image" content="assets/images/profile-avatar.svg">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Mohamed Zakaria — Flutter Developer" />
+    <meta
+      name="twitter:description"
+      content="Computer & Systems Engineering student & Flutter developer crafting scalable mobile apps."
+    />
+    <meta name="twitter:image" content="assets/images/profile-avatar.svg" />
 
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Mohamed Zakaria — Flutter Developer">
-  <meta name="twitter:description"
-    content="Computer & Systems Engineering student & Flutter developer crafting scalable mobile apps.">
-  <meta name="twitter:image" content="assets/images/profile-avatar.svg">
+    <!-- Theme Color for Mobile Browsers -->
+    <meta name="theme-color" content="#03A791" id="theme-color-meta" />
 
-  <!-- Theme Color for Mobile Browsers -->
-  <meta name="theme-color" content="#03A791" id="theme-color-meta">
+    <!-- Preconnect to Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
 
-  <!-- Preconnect to Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
-    rel="stylesheet">
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="styles.css" />
+  </head>
 
-  <!-- Stylesheet -->
-  <link rel="stylesheet" href="styles.css">
-</head>
+  <body>
+    <!-- Ambient background glow element -->
+    <div class="ambient-glow" id="ambient-glow" aria-hidden="true"></div>
 
-<body>
-  <!-- Ambient background glow element -->
-  <div class="ambient-glow" id="ambient-glow" aria-hidden="true"></div>
-
-  <!-- =========================================================================
+    <!-- =========================================================================
        NAVIGATION BAR (Fixed, Accessible, Responsive)
        ========================================================================= -->
-  <header class="header" id="navbar">
-    <div class="nav-container">
-      <!-- Brand Logo -->
-      <a href="#home" class="nav-brand" aria-label="Mohamed Zakaria - Return to Home">
-        <span class="brand-code">&lt;</span>
-        <span class="brand-name">Mohamed Zakaria</span>
-        <span class="brand-code">/&gt;</span>
-        <span class="brand-tag">Flutter</span>
-      </a>
-
-      <!-- Desktop Navigation Menu -->
-      <nav class="nav-menu" id="nav-menu" aria-label="Main Navigation">
-        <ul class="nav-list" role="menubar">
-          <li role="none"><a href="#home" class="nav-link active" role="menuitem" data-section="home">Home</a></li>
-          <li role="none"><a href="#about" class="nav-link" role="menuitem" data-section="about">About</a></li>
-          <li role="none"><a href="#education" class="nav-link" role="menuitem" data-section="education">Education</a>
-          </li>
-          <li role="none"><a href="#experience" class="nav-link" role="menuitem"
-              data-section="experience">Experience</a></li>
-          <li role="none"><a href="#skills" class="nav-link" role="menuitem" data-section="skills">Skills</a></li>
-          <li role="none"><a href="#projects" class="nav-link" role="menuitem" data-section="projects">Projects</a></li>
-          <li role="none"><a href="#testimonials" class="nav-link" role="menuitem"
-              data-section="testimonials">Testimonials</a></li>
-          <li role="none"><a href="#services" class="nav-link" role="menuitem" data-section="services">Services</a></li>
-          <li role="none"><a href="#contact" class="nav-link" role="menuitem" data-section="contact">Contact</a></li>
-        </ul>
-      </nav>
-
-      <!-- Navigation Actions: Theme Toggle & CV Download -->
-      <div class="nav-actions">
-        <!-- Theme Toggle Button -->
-        <button type="button" class="theme-toggle-btn" id="theme-toggle-btn"
-          aria-label="Switch between light and dark theme" title="Toggle theme">
-          <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20"
-            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-            aria-hidden="true">
-            <circle cx="12" cy="12" r="5"></circle>
-            <line x1="12" y1="1" x2="12" y2="3"></line>
-            <line x1="12" y1="21" x2="12" y2="23"></line>
-            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-            <line x1="1" y1="12" x2="3" y2="12"></line>
-            <line x1="21" y1="12" x2="23" y2="12"></line>
-            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-          </svg>
-          <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20"
-            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-            aria-hidden="true">
-            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-          </svg>
-        </button>
-
-        <!-- CV Button -->
-        <a href="assets/cv/Mohamed-Zakaria-CV.pdf" class="btn btn-sm btn-outline nav-cv-btn" id="nav-cv-btn"
-          download="Mohamed-Zakaria-CV.pdf" target="_blank" rel="noopener noreferrer"
-          aria-label="Download Mohamed Zakaria CV in PDF format">
-          <svg class="btn-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16"
-            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-            aria-hidden="true">
-            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
-            <polyline points="7 10 12 15 17 10"></polyline>
-            <line x1="12" y1="15" x2="12" y2="3"></line>
-          </svg>
-          <span>CV</span>
+    <header class="header" id="navbar">
+      <div class="nav-container">
+        <!-- Brand Logo -->
+        <a
+          href="#home"
+          class="nav-brand"
+          aria-label="Mohamed Zakaria - Return to Home"
+        >
+          <span class="brand-code">&lt;</span>
+          <span class="brand-name">Mohamed Zakaria</span>
+          <span class="brand-code">/&gt;</span>
+          <span class="brand-tag">Flutter</span>
         </a>
 
-        <!-- Mobile Menu Hamburger Button -->
-        <button type="button" class="mobile-toggle-btn" id="mobile-toggle-btn" aria-label="Open navigation menu"
-          aria-expanded="false" aria-controls="mobile-drawer">
-          <span class="hamburger-bar"></span>
-          <span class="hamburger-bar"></span>
-          <span class="hamburger-bar"></span>
-        </button>
-      </div>
-    </div>
+        <!-- Desktop Navigation Menu -->
+        <nav class="nav-menu" id="nav-menu" aria-label="Main Navigation">
+          <ul class="nav-list" role="menubar">
+            <li role="none">
+              <a
+                href="#home"
+                class="nav-link active"
+                role="menuitem"
+                data-section="home"
+                >Home</a
+              >
+            </li>
+            <li role="none">
+              <a
+                href="#about"
+                class="nav-link"
+                role="menuitem"
+                data-section="about"
+                >About</a
+              >
+            </li>
+            <li role="none">
+              <a
+                href="#education"
+                class="nav-link"
+                role="menuitem"
+                data-section="education"
+                >Education</a
+              >
+            </li>
+            <li role="none">
+              <a
+                href="#experience"
+                class="nav-link"
+                role="menuitem"
+                data-section="experience"
+                >Experience</a
+              >
+            </li>
+            <li role="none">
+              <a
+                href="#skills"
+                class="nav-link"
+                role="menuitem"
+                data-section="skills"
+                >Skills</a
+              >
+            </li>
+            <li role="none">
+              <a
+                href="#projects"
+                class="nav-link"
+                role="menuitem"
+                data-section="projects"
+                >Projects</a
+              >
+            </li>
+            <li role="none">
+              <a
+                href="#testimonials"
+                class="nav-link"
+                role="menuitem"
+                data-section="testimonials"
+                >Testimonials</a
+              >
+            </li>
+            <li role="none">
+              <a
+                href="#services"
+                class="nav-link"
+                role="menuitem"
+                data-section="services"
+                >Services</a
+              >
+            </li>
+            <li role="none">
+              <a
+                href="#contact"
+                class="nav-link"
+                role="menuitem"
+                data-section="contact"
+                >Contact</a
+              >
+            </li>
+          </ul>
+        </nav>
 
-    <!-- Mobile Drawer Navigation -->
-    <div class="mobile-drawer" id="mobile-drawer" aria-hidden="true">
-      <div class="mobile-drawer-content">
-        <ul class="mobile-nav-list">
-          <li><a href="#home" class="mobile-nav-link" data-section="home">Home</a></li>
-          <li><a href="#about" class="mobile-nav-link" data-section="about">About</a></li>
-          <li><a href="#education" class="mobile-nav-link" data-section="education">Education</a></li>
-          <li><a href="#experience" class="mobile-nav-link" data-section="experience">Experience</a></li>
-          <li><a href="#skills" class="mobile-nav-link" data-section="skills">Skills</a></li>
-          <li><a href="#projects" class="mobile-nav-link" data-section="projects">Projects</a></li>
-          <li><a href="#testimonials" class="mobile-nav-link" data-section="testimonials">Testimonials</a></li>
-          <li><a href="#services" class="mobile-nav-link" data-section="services">Services</a></li>
-          <li><a href="#contact" class="mobile-nav-link" data-section="contact">Contact</a></li>
-        </ul>
-        <div class="mobile-drawer-footer">
-          <a href="assets/cv/Mohamed-Zakaria-CV.pdf" class="btn btn-primary btn-block" download="Mohamed-Zakaria-CV.pdf"
-            target="_blank" rel="noopener noreferrer">
-            <svg class="btn-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16"
-              fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-              aria-hidden="true">
+        <!-- Navigation Actions: Theme Toggle & CV Download -->
+        <div class="nav-actions">
+          <!-- Theme Toggle Button -->
+          <button
+            type="button"
+            class="theme-toggle-btn"
+            id="theme-toggle-btn"
+            aria-label="Switch between light and dark theme"
+            title="Toggle theme"
+          >
+            <svg
+              class="sun-icon"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              width="20"
+              height="20"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <circle cx="12" cy="12" r="5"></circle>
+              <line x1="12" y1="1" x2="12" y2="3"></line>
+              <line x1="12" y1="21" x2="12" y2="23"></line>
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+              <line x1="1" y1="12" x2="3" y2="12"></line>
+              <line x1="21" y1="12" x2="23" y2="12"></line>
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+            </svg>
+            <svg
+              class="moon-icon"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              width="20"
+              height="20"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+            </svg>
+          </button>
+
+          <!-- CV Button -->
+          <a
+            href="assets/cv/Mohamed-Zakaria-CV.pdf"
+            class="btn btn-sm btn-outline nav-cv-btn"
+            id="nav-cv-btn"
+            download="Mohamed-Zakaria-CV.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Download Mohamed Zakaria CV in PDF format"
+          >
+            <svg
+              class="btn-icon"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              width="16"
+              height="16"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
               <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
               <polyline points="7 10 12 15 17 10"></polyline>
               <line x1="12" y1="15" x2="12" y2="3"></line>
             </svg>
-            Download CV
+            <span>CV</span>
           </a>
+
+          <!-- Mobile Menu Hamburger Button -->
+          <button
+            type="button"
+            class="mobile-toggle-btn"
+            id="mobile-toggle-btn"
+            aria-label="Open navigation menu"
+            aria-expanded="false"
+            aria-controls="mobile-drawer"
+          >
+            <span class="hamburger-bar"></span>
+            <span class="hamburger-bar"></span>
+            <span class="hamburger-bar"></span>
+          </button>
         </div>
       </div>
-    </div>
-    <!-- Mobile Backdrop -->
-    <div class="mobile-backdrop" id="mobile-backdrop" aria-hidden="true"></div>
-  </header>
 
-  <!-- =========================================================================
+      <!-- Mobile Drawer Navigation -->
+      <div class="mobile-drawer" id="mobile-drawer" aria-hidden="true">
+        <div class="mobile-drawer-content">
+          <ul class="mobile-nav-list">
+            <li>
+              <a href="#home" class="mobile-nav-link" data-section="home"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a href="#about" class="mobile-nav-link" data-section="about"
+                >About</a
+              >
+            </li>
+            <li>
+              <a
+                href="#education"
+                class="mobile-nav-link"
+                data-section="education"
+                >Education</a
+              >
+            </li>
+            <li>
+              <a
+                href="#experience"
+                class="mobile-nav-link"
+                data-section="experience"
+                >Experience</a
+              >
+            </li>
+            <li>
+              <a href="#skills" class="mobile-nav-link" data-section="skills"
+                >Skills</a
+              >
+            </li>
+            <li>
+              <a
+                href="#projects"
+                class="mobile-nav-link"
+                data-section="projects"
+                >Projects</a
+              >
+            </li>
+            <li>
+              <a
+                href="#testimonials"
+                class="mobile-nav-link"
+                data-section="testimonials"
+                >Testimonials</a
+              >
+            </li>
+            <li>
+              <a
+                href="#services"
+                class="mobile-nav-link"
+                data-section="services"
+                >Services</a
+              >
+            </li>
+            <li>
+              <a href="#contact" class="mobile-nav-link" data-section="contact"
+                >Contact</a
+              >
+            </li>
+          </ul>
+          <div class="mobile-drawer-footer">
+            <a
+              href="assets/cv/Mohamed-Zakaria-CV.pdf"
+              class="btn btn-primary btn-block"
+              download="Mohamed-Zakaria-CV.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <svg
+                class="btn-icon"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                width="16"
+                height="16"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                <polyline points="7 10 12 15 17 10"></polyline>
+                <line x1="12" y1="15" x2="12" y2="3"></line>
+              </svg>
+              Download CV
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- Mobile Backdrop -->
+      <div
+        class="mobile-backdrop"
+        id="mobile-backdrop"
+        aria-hidden="true"
+      ></div>
+    </header>
+
+    <!-- =========================================================================
        MAIN CONTENT
        ========================================================================= -->
-  <main id="main-content">
-
-    <!-- =======================================================================
+    <main id="main-content">
+      <!-- =======================================================================
          SECTION 1: HOME / HERO
          ======================================================================= -->
-    <section class="section hero-section" id="home" aria-labelledby="hero-title">
-      <div class="container hero-container">
-        <!-- Hero Content (Left) -->
-        <div class="hero-content reveal-item">
-          <!-- Small Badge -->
-          <div class="badge hero-badge">
-            <span class="badge-dot" aria-hidden="true"></span>
-            <span class="badge-text">Dart • Flutter Developer</span>
+      <section
+        class="section hero-section"
+        id="home"
+        aria-labelledby="hero-title"
+      >
+        <div class="container hero-container">
+          <!-- Hero Content (Left) -->
+          <div class="hero-content reveal-item">
+            <!-- Small Badge -->
+            <div class="badge hero-badge">
+              <span class="badge-dot" aria-hidden="true"></span>
+              <span class="badge-text">Dart • Flutter Developer</span>
+            </div>
+
+            <!-- Main Heading -->
+            <h1 class="hero-title" id="hero-title">Mohamed Zakaria</h1>
+
+            <!-- Dynamic Roles Subtitle -->
+            <div class="hero-roles-wrapper" aria-live="polite">
+              <span class="roles-prefix">I build as a </span>
+              <span class="hero-role-text" id="hero-role-text"
+                >Flutter Developer</span
+              >
+              <span class="cursor-blink" aria-hidden="true">|</span>
+            </div>
+
+            <!-- Bio Paragraph (approx 3 lines) -->
+            <p class="hero-bio">
+              Computer and Systems Engineering student focused on building
+              modern mobile applications with Flutter and Dart. I enjoy turning
+              ideas into clean, functional products and continuously improving
+              my software engineering skills.
+            </p>
+
+            <!-- Action Buttons -->
+            <div class="hero-actions">
+              <!-- Primary Action: Hire Me (opens/downloads CV) -->
+              <a
+                href="assets/cv/Mohamed-Zakaria-CV.pdf"
+                class="btn btn-primary"
+                id="hero-hire-btn"
+                download="Mohamed-Zakaria-CV.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Hire Me - Download Mohamed Zakaria's CV"
+              >
+                <svg
+                  class="btn-icon"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  width="18"
+                  height="18"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                  <polyline points="7 10 12 15 17 10"></polyline>
+                  <line x1="12" y1="15" x2="12" y2="3"></line>
+                </svg>
+                <span>Hire Me</span>
+              </a>
+
+              <!-- Secondary Action: View Projects -->
+              <a
+                href="#projects"
+                class="btn btn-secondary"
+                id="hero-projects-btn"
+              >
+                <span>View Projects</span>
+                <svg
+                  class="btn-icon-right"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  width="16"
+                  height="16"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <line x1="7" y1="17" x2="17" y2="7"></line>
+                  <polyline points="7 7 17 7 17 17"></polyline>
+                </svg>
+              </a>
+            </div>
+
+            <!-- Social Icon Links -->
+            <div class="hero-socials">
+              <span class="socials-label">Connect:</span>
+              <!-- LinkedIn -->
+              <a
+                href="https://linkedin.com/in/YOUR_LINKEDIN_USERNAME"
+                class="social-link"
+                id="social-linkedin"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Visit Mohamed Zakaria's LinkedIn profile (placeholder link)"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  width="18"
+                  height="18"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"
+                  ></path>
+                  <rect x="2" y="9" width="4" height="12"></rect>
+                  <circle cx="4" cy="4" r="2"></circle>
+                </svg>
+                <span class="sr-only">LinkedIn</span>
+              </a>
+
+              <!-- GitHub -->
+              <a
+                href="https://github.com/YOUR_GITHUB_USERNAME"
+                class="social-link"
+                id="social-github"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Visit Mohamed Zakaria's GitHub profile (placeholder link)"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  width="18"
+                  height="18"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"
+                  ></path>
+                </svg>
+                <span class="sr-only">GitHub</span>
+              </a>
+
+              <!-- Gmail -->
+              <a
+                href="mailto:YOUR_EMAIL@gmail.com"
+                class="social-link"
+                id="social-email"
+                aria-label="Send an email to Mohamed Zakaria (placeholder link)"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  width="18"
+                  height="18"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+                  ></path>
+                  <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+                <span class="sr-only">Gmail</span>
+              </a>
+            </div>
           </div>
 
-          <!-- Main Heading -->
-          <h1 class="hero-title" id="hero-title">
-            Mohamed Zakaria
-          </h1>
+          <!-- Hero Avatar (Right) -->
+          <div class="hero-visual reveal-item">
+            <div class="avatar-ring-container">
+              <div class="avatar-glow-pulse" aria-hidden="true"></div>
+              <div class="avatar-frame">
+                <img
+                  src="assets/images/profile-avatar.png"
+                  alt="Portrait illustration of Mohamed Zakaria, Flutter Developer"
+                  class="hero-avatar-img"
+                  width="340"
+                  height="340"
+                  loading="eager"
+                />
+              </div>
+              <!-- Floating Mini Badge -->
+              <div class="avatar-float-badge float-top" aria-hidden="true">
+                <span class="float-icon">📱</span>
+                <span class="float-text">Flutter &amp; Dart</span>
+              </div>
+              <div class="avatar-float-badge float-bottom" aria-hidden="true">
+                <span class="float-icon">⚡</span>
+                <span class="float-text">Clean Code</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
-          <!-- Dynamic Roles Subtitle -->
-          <div class="hero-roles-wrapper" aria-live="polite">
-            <span class="roles-prefix">I build as a </span>
-            <span class="hero-role-text" id="hero-role-text">Flutter Developer</span>
-            <span class="cursor-blink" aria-hidden="true">|</span>
+      <!-- =======================================================================
+         SECTION 2: ABOUT
+         ======================================================================= -->
+      <section
+        class="section about-section"
+        id="about"
+        aria-labelledby="about-title"
+      >
+        <div class="container">
+          <div class="section-header text-center reveal-item">
+            <span class="section-eyebrow">ABOUT ME</span>
+            <h2 class="section-title" id="about-title">
+              Software Engineering Meets Mobile Craft
+            </h2>
+            <div class="section-divider" aria-hidden="true"></div>
           </div>
 
-          <!-- Bio Paragraph (approx 3 lines) -->
-          <p class="hero-bio">
-            Computer and Systems Engineering student focused on building modern mobile applications with Flutter and
-            Dart. I enjoy turning ideas into clean, functional products and continuously improving my software
-            engineering skills.
-          </p>
+          <div class="about-grid">
+            <!-- Left: Visual Illustration -->
+            <div class="about-visual reveal-item">
+              <div class="about-image-card">
+                <img
+                  src="assets/images/about-visual.svg"
+                  alt="Architecture overview depicting Flutter UI, Cubit state management, and persistence layers"
+                  class="about-svg-img"
+                  width="520"
+                  height="420"
+                  loading="lazy"
+                />
+                <div class="about-image-overlay">
+                  <span class="card-caption"
+                    >Clean Architecture • Scalable Mobile Systems</span
+                  >
+                </div>
+              </div>
+            </div>
 
-          <!-- Action Buttons -->
-          <div class="hero-actions">
-            <!-- Primary Action: Hire Me (opens/downloads CV) -->
-            <a href="assets/cv/Mohamed-Zakaria-CV.pdf" class="btn btn-primary" id="hero-hire-btn"
-              download="Mohamed-Zakaria-CV.pdf" target="_blank" rel="noopener noreferrer"
-              aria-label="Hire Me - Download Mohamed Zakaria's CV">
-              <svg class="btn-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18"
-                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                aria-hidden="true">
+            <!-- Right: Professional Bio & Stats -->
+            <div class="about-content reveal-item">
+              <h3 class="about-subtitle">
+                Building Resilient Mobile Applications
+              </h3>
+              <p class="about-text">
+                I am a Computer and Systems Engineering student at Zagazig
+                University with a focused specialization in mobile application
+                development using Flutter and Dart. My academic curriculum
+                provides a rigorous foundation in algorithms, data structures,
+                operating systems, and database systems.
+              </p>
+              <p class="about-text">
+                In my software engineering projects, I apply Clean Architecture
+                and MVVM patterns combined with Cubit for predictable, reactive
+                state management. I build smooth user interfaces, integrate
+                RESTful APIs with robust error handling, and implement cloud
+                services like Firebase along with local SQLite databases.
+              </p>
+              <p class="about-text">
+                Passionate about continuous learning, I actively refine my
+                development workflow, explore emerging mobile technologies, and
+                write clean, modular, and maintainable Dart code.
+              </p>
+
+              <!-- 3 Statistic Cards -->
+              <div class="about-stats-grid">
+                <div class="stat-card">
+                  <span class="stat-number">Entry Level</span>
+                  <span class="stat-label">Developer Level</span>
+                </div>
+                <div class="stat-card">
+                  <span class="stat-number">3+</span>
+                  <span class="stat-label">Projects Built</span>
+                </div>
+                <div class="stat-card">
+                  <span class="stat-number">Flutter</span>
+                  <span class="stat-label">Primary Stack</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =======================================================================
+         SECTION 3: EDUCATION
+         ======================================================================= -->
+      <section
+        class="section education-section"
+        id="education"
+        aria-labelledby="education-title"
+      >
+        <div class="container">
+          <div class="section-header text-center reveal-item">
+            <span class="section-eyebrow">ACADEMIC BACKGROUND</span>
+            <h2 class="section-title" id="education-title">Education</h2>
+            <div class="section-divider" aria-hidden="true"></div>
+          </div>
+
+          <div class="education-card-container reveal-item">
+            <article class="education-card">
+              <div class="education-card-header">
+                <div class="edu-icon-badge" aria-hidden="true">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    width="28"
+                    height="28"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+                    <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+                  </svg>
+                </div>
+                <div class="edu-title-group">
+                  <h3 class="edu-degree">Computer and Systems Engineering</h3>
+                  <p class="edu-institution">Zagazig University</p>
+                </div>
+                <div class="edu-grade-badge">
+                  <span class="grade-label">Academic Grade</span>
+                  <span class="grade-value">Very Good</span>
+                </div>
+              </div>
+
+              <div class="education-card-body">
+                <p class="edu-description">
+                  Engineering studies covering computer systems, programming,
+                  software development, algorithms, databases, and related
+                  engineering disciplines.
+                </p>
+
+                <div class="edu-curriculum">
+                  <h4 class="curriculum-heading">
+                    Key Engineering Disciplines:
+                  </h4>
+                  <div class="curriculum-tags">
+                    <span class="tag">Algorithms &amp; Data Structures</span>
+                    <span class="tag">Object-Oriented Programming (OOP)</span>
+                    <span class="tag">Database Management Systems (SQL)</span>
+                    <span class="tag">Software Engineering Principles</span>
+                    <span class="tag"
+                      >Operating Systems &amp; Computer Architecture</span
+                    >
+                    <span class="tag">Computer Networks</span>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- =======================================================================
+         SECTION 4: EXPERIENCE
+         ======================================================================= -->
+      <section
+        class="section experience-section"
+        id="experience"
+        aria-labelledby="experience-title"
+      >
+        <div class="container">
+          <div class="section-header text-center reveal-item">
+            <span class="section-eyebrow">WORK HISTORY</span>
+            <h2 class="section-title" id="experience-title">Experience</h2>
+            <div class="section-divider" aria-hidden="true"></div>
+          </div>
+
+          <!-- Vertical Timeline Structure -->
+          <div class="timeline-wrapper">
+            <div class="timeline-spine" aria-hidden="true"></div>
+
+            <!-- Timeline Item 1: Freelance / Self-employed -->
+            <div class="timeline-item reveal-item">
+              <div class="timeline-marker" aria-hidden="true">
+                <div class="marker-dot"></div>
+              </div>
+              <article class="timeline-card">
+                <div class="card-meta">
+                  <span class="timeline-platform"
+                    >Freelance / Self-employed</span
+                  >
+                  <!-- Placeholder date: replace when actual timeframe is ready -->
+                  <span class="timeline-period">2024 — Present</span>
+                </div>
+                <h3 class="timeline-role">Flutter Developer</h3>
+                <p class="timeline-description">
+                  Building Flutter applications, implementing responsive
+                  interfaces, integrating APIs and backend services, and
+                  applying reusable architecture and state-management patterns.
+                </p>
+                <div class="timeline-tags">
+                  <span class="tag">Flutter</span>
+                  <span class="tag">Dart</span>
+                  <span class="tag">MVVM</span>
+                  <span class="tag">Cubit / BLoC</span>
+                  <span class="tag">REST APIs</span>
+                </div>
+              </article>
+            </div>
+
+            <!-- Timeline Item 2: Upwork -->
+            <div class="timeline-item reveal-item">
+              <div class="timeline-marker" aria-hidden="true">
+                <div class="marker-dot"></div>
+              </div>
+              <article class="timeline-card">
+                <div class="card-meta">
+                  <span class="timeline-platform">Upwork</span>
+                  <!-- Placeholder date -->
+                  <span class="timeline-period">2024 — Present</span>
+                </div>
+                <h3 class="timeline-role">Freelance Developer</h3>
+                <p class="timeline-description">
+                  Delivering client-focused mobile application features,
+                  resolving UI layout and state management issues, and
+                  integrating RESTful services for deliverables.
+                </p>
+                <div class="timeline-tags">
+                  <span class="tag">Mobile UI</span>
+                  <span class="tag">State Management</span>
+                  <span class="tag">Client Delivery</span>
+                  <span class="tag">Bug Fixing</span>
+                </div>
+              </article>
+            </div>
+
+            <!-- Timeline Item 3: Khamsat -->
+            <div class="timeline-item reveal-item">
+              <div class="timeline-marker" aria-hidden="true">
+                <div class="marker-dot"></div>
+              </div>
+              <article class="timeline-card">
+                <div class="card-meta">
+                  <span class="timeline-platform">Khamsat</span>
+                  <!-- Placeholder date -->
+                  <span class="timeline-period">2023 — Present</span>
+                </div>
+                <h3 class="timeline-role">Freelance Developer</h3>
+                <p class="timeline-description">
+                  Developing responsive Flutter mobile components, implementing
+                  UI screens according to client specifications, and assisting
+                  with mobile bug resolution.
+                </p>
+                <div class="timeline-tags">
+                  <span class="tag">Flutter</span>
+                  <span class="tag">Dart</span>
+                  <span class="tag">Responsive UI</span>
+                  <span class="tag">Local Cache</span>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =======================================================================
+         SECTION 5: SKILLS
+         ======================================================================= -->
+      <section
+        class="section skills-section"
+        id="skills"
+        aria-labelledby="skills-title"
+      >
+        <div class="container">
+          <div class="section-header text-center reveal-item">
+            <span class="section-eyebrow">PROFICIENCIES</span>
+            <h2 class="section-title" id="skills-title">
+              Skills &amp; Technologies
+            </h2>
+            <p class="section-subtitle">
+              Self-assessed proficiency ratings for personal development
+              tracking; not certified test metrics.
+            </p>
+            <div class="section-divider" aria-hidden="true"></div>
+          </div>
+
+          <!-- Category Filter Buttons -->
+          <div
+            class="skills-filter-container reveal-item"
+            role="tablist"
+            aria-label="Skills Category Filter"
+          >
+            <button
+              type="button"
+              class="skills-filter-btn active"
+              data-filter="all"
+              role="tab"
+              aria-selected="true"
+              id="tab-all"
+            >
+              All Skills
+            </button>
+            <button
+              type="button"
+              class="skills-filter-btn"
+              data-filter="technical"
+              role="tab"
+              aria-selected="false"
+              id="tab-tech"
+            >
+              Technical Skills
+            </button>
+            <button
+              type="button"
+              class="skills-filter-btn"
+              data-filter="non-technical"
+              role="tab"
+              aria-selected="false"
+              id="tab-nontech"
+            >
+              Non-Technical Skills
+            </button>
+          </div>
+
+          <!-- Skills Grid (Rendered and updated by script.js using portfolioData) -->
+          <div class="skills-grid" id="skills-grid" aria-live="polite">
+            <!-- Dynamically populated by script.js; fallback HTML for SEO/no-JS below -->
+            <div class="skill-group technical-group" data-category="technical">
+              <h3 class="skill-group-title">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  width="18"
+                  height="18"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <polyline points="16 18 22 12 16 6"></polyline>
+                  <polyline points="8 6 2 12 8 18"></polyline>
+                </svg>
+                Technical Skills
+              </h3>
+              <div class="skill-items-container" id="technical-skills-list">
+                <!-- Technical skills rendered by script.js -->
+              </div>
+            </div>
+
+            <div
+              class="skill-group nontechnical-group"
+              data-category="non-technical"
+            >
+              <h3 class="skill-group-title">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  width="18"
+                  height="18"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                  <circle cx="9" cy="7" r="4"></circle>
+                  <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                  <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                </svg>
+                Non-Technical Skills
+              </h3>
+              <div class="skill-items-container" id="nontechnical-skills-list">
+                <!-- Non-technical skills rendered by script.js -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =======================================================================
+         SECTION 6: PROJECTS
+         ======================================================================= -->
+      <section
+        class="section projects-section"
+        id="projects"
+        aria-labelledby="projects-title"
+      >
+        <div class="container">
+          <div class="section-header text-center reveal-item">
+            <span class="section-eyebrow">PORTFOLIO WORK</span>
+            <h2 class="section-title" id="projects-title">
+              Featured Mobile Projects
+            </h2>
+            <p class="section-subtitle">
+              Real-world mobile apps built with Flutter, clean architecture, and
+              modern state management.
+            </p>
+            <div class="section-divider" aria-hidden="true"></div>
+          </div>
+
+          <div class="projects-grid">
+            <!-- PROJECT 1: News App -->
+            <article class="project-card reveal-item" id="project-card-news">
+              <div class="project-image-box">
+                <img
+                  src="assets/images/project-money-mate.png"
+                  alt="Flutter Money-Mate mobile application preview"
+                  class="project-thumb-img"
+                  width="600"
+                  height="380"
+                  loading="lazy"
+                />
+                <div class="project-badge-overlay">
+                  <span class="pill-badge">MVVM • Cubit</span>
+                </div>
+              </div>
+              <div class="project-body">
+                <h3 class="project-name">Money-Mate</h3>
+                <p class="project-desc">
+                  A modern mobile news application with MVVM architecture and
+                  Cubit for reactive state management, featuring dynamic
+                  categorization, REST API feeds, and offline caching.
+                </p>
+
+                <!-- Technologies -->
+                <div class="project-tech-list">
+                  <span class="tag">Flutter</span>
+                  <span class="tag">Dart</span>
+                  <span class="tag">REST API</span>
+                  <span class="tag">Cubit</span>
+                  <span class="tag">MVVM</span>
+                  <span class="tag">Shared Preferences</span>
+                </div>
+
+                <!-- Project Actions -->
+                <div class="project-actions">
+                  <a
+                    href="https://github.com/YOUR_GITHUB_USERNAME/flutter-news-app"
+                    class="btn btn-sm btn-outline"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="View News App source code on GitHub (placeholder link)"
+                  >
+                    <svg
+                      class="btn-icon"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      width="16"
+                      height="16"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      aria-hidden="true"
+                    >
+                      <path
+                        d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"
+                      ></path>
+                    </svg>
+                    <span>GitHub</span>
+                  </a>
+                  <button
+                    type="button"
+                    class="btn btn-sm btn-secondary project-detail-btn"
+                    data-project="news"
+                    aria-label="View interactive details for News App"
+                  >
+                    <svg
+                      class="btn-icon"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      width="16"
+                      height="16"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      aria-hidden="true"
+                    >
+                      <circle cx="12" cy="12" r="10"></circle>
+                      <line x1="12" y1="16" x2="12" y2="12"></line>
+                      <line x1="12" y1="8" x2="12.01" y2="8"></line>
+                    </svg>
+                    <span>Live Details</span>
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <!-- PROJECT 2: E-Commerce App -->
+            <article
+              class="project-card reveal-item"
+              id="project-card-ecommerce"
+            >
+              <div class="project-image-box">
+                <img
+                  src="assets/images/project-ecommerce.png"
+                  alt="Flutter E-Commerce App with Firebase Auth and Firestore preview"
+                  class="project-thumb-img"
+                  width="600"
+                  height="380"
+                  loading="lazy"
+                />
+                <div class="project-badge-overlay">
+                  <span class="pill-badge">Firebase • MVVM</span>
+                </div>
+              </div>
+              <div class="project-body">
+                <h3 class="project-name">E-Commerce App</h3>
+                <p class="project-desc">
+                  Full-featured mobile commerce platform featuring Firebase
+                  Authentication, live Firestore product synchronization,
+                  dynamic cart, wishlist, and user profile management.
+                </p>
+
+                <!-- Technologies -->
+                <div class="project-tech-list">
+                  <span class="tag">Flutter</span>
+                  <span class="tag">Dart</span>
+                  <span class="tag">Firebase Auth</span>
+                  <span class="tag">Firestore</span>
+                  <span class="tag">Cubit</span>
+                  <span class="tag">MVVM</span>
+                  <span class="tag">Shared Preferences</span>
+                </div>
+
+                <!-- Project Actions -->
+                <div class="project-actions">
+                  <a
+                    href="https://github.com/YOUR_GITHUB_USERNAME/flutter-ecommerce-app"
+                    class="btn btn-sm btn-outline"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="View E-Commerce App source code on GitHub (placeholder link)"
+                  >
+                    <svg
+                      class="btn-icon"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      width="16"
+                      height="16"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      aria-hidden="true"
+                    >
+                      <path
+                        d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"
+                      ></path>
+                    </svg>
+                    <span>GitHub</span>
+                  </a>
+                  <button
+                    type="button"
+                    class="btn btn-sm btn-secondary project-detail-btn"
+                    data-project="ecommerce"
+                    aria-label="View interactive details for E-Commerce App"
+                  >
+                    <svg
+                      class="btn-icon"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      width="16"
+                      height="16"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      aria-hidden="true"
+                    >
+                      <circle cx="12" cy="12" r="10"></circle>
+                      <line x1="12" y1="16" x2="12" y2="12"></line>
+                      <line x1="12" y1="8" x2="12.01" y2="8"></line>
+                    </svg>
+                    <span>Live Details</span>
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <!-- PROJECT 3: To-Do App -->
+            <article class="project-card reveal-item" id="project-card-todo">
+              <div class="project-image-box">
+                <img
+                  src="assets/images/project-todo.png"
+                  alt="Flutter To-Do App with SQLite persistence and Cubit preview"
+                  class="project-thumb-img"
+                  width="600"
+                  height="380"
+                  loading="lazy"
+                />
+                <div class="project-badge-overlay">
+                  <span class="pill-badge">SQLite • Cubit</span>
+                </div>
+              </div>
+              <div class="project-body">
+                <h3 class="project-name">To-Do App</h3>
+                <p class="project-desc">
+                  High-performance productivity app providing offline-first task
+                  management with SQLite database persistence, task status
+                  filtering, priority tagging, and Cubit state management.
+                </p>
+
+                <!-- Technologies -->
+                <div class="project-tech-list">
+                  <span class="tag">Flutter</span>
+                  <span class="tag">Dart</span>
+                  <span class="tag">SQLite</span>
+                  <span class="tag">Cubit</span>
+                  <span class="tag">Shared Preferences</span>
+                </div>
+
+                <!-- Project Actions -->
+                <div class="project-actions">
+                  <a
+                    href="https://github.com/YOUR_GITHUB_USERNAME/flutter-todo-app"
+                    class="btn btn-sm btn-outline"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="View To-Do App source code on GitHub (placeholder link)"
+                  >
+                    <svg
+                      class="btn-icon"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      width="16"
+                      height="16"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      aria-hidden="true"
+                    >
+                      <path
+                        d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"
+                      ></path>
+                    </svg>
+                    <span>GitHub</span>
+                  </a>
+                  <button
+                    type="button"
+                    class="btn btn-sm btn-secondary project-detail-btn"
+                    data-project="todo"
+                    aria-label="View interactive details for To-Do App"
+                  >
+                    <svg
+                      class="btn-icon"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      width="16"
+                      height="16"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      aria-hidden="true"
+                    >
+                      <circle cx="12" cy="12" r="10"></circle>
+                      <line x1="12" y1="16" x2="12" y2="12"></line>
+                      <line x1="12" y1="8" x2="12.01" y2="8"></line>
+                    </svg>
+                    <span>Live Details</span>
+                  </button>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- =======================================================================
+         SECTION 7: TESTIMONIALS (Horizontal Carousel, Accessible, Demo Data)
+         ======================================================================= -->
+      <section
+        class="section testimonials-section"
+        id="testimonials"
+        aria-labelledby="testimonials-title"
+      >
+        <div class="container">
+          <div class="section-header text-center reveal-item">
+            <span class="section-eyebrow">FEEDBACK</span>
+            <h2 class="section-title" id="testimonials-title">Testimonials</h2>
+            <div class="demo-badge-notice">
+              <span class="badge-dot" aria-hidden="true"></span>
+              <span
+                >Demo Content — Illustrative placeholders for presentation
+                quality</span
+              >
+            </div>
+            <div class="section-divider" aria-hidden="true"></div>
+          </div>
+
+          <!-- Carousel Container -->
+          <div class="testimonials-carousel-wrapper reveal-item">
+            <!-- Navigation Arrow (Prev) -->
+            <button
+              type="button"
+              class="carousel-arrow prev-arrow"
+              id="carousel-prev-btn"
+              aria-label="Previous testimonial"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                width="20"
+                height="20"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <polyline points="15 18 9 12 15 6"></polyline>
+              </svg>
+            </button>
+
+            <!-- Track Container -->
+            <div
+              class="testimonials-track-container"
+              id="testimonials-track-container"
+            >
+              <div
+                class="testimonials-track"
+                id="testimonials-track"
+                role="region"
+                aria-label="Testimonial slider"
+                aria-live="polite"
+              >
+                <!-- Testimonial 1 (Demo) -->
+                <article class="testimonial-card" data-index="0">
+                  <div class="quote-icon" aria-hidden="true">“</div>
+                  <p class="testimonial-text">
+                    "Mohamed delivered our Flutter application on schedule with
+                    clean MVVM architecture and responsive layouts. His
+                    communication throughout the sprint was exemplary, and state
+                    transitions were handled flawlessly."
+                  </p>
+                  <div class="testimonial-author">
+                    <div class="author-avatar" aria-hidden="true">DC</div>
+                    <div class="author-info">
+                      <strong class="author-name">— Demo Client</strong>
+                      <span class="author-role"
+                        >Upwork Project Partner (Demo)</span
+                      >
+                    </div>
+                  </div>
+                </article>
+
+                <!-- Testimonial 2 (Demo) -->
+                <article class="testimonial-card" data-index="1">
+                  <div class="quote-icon" aria-hidden="true">“</div>
+                  <p class="testimonial-text">
+                    "Excellent mobile developer who deeply understands state
+                    management with Cubit. He integrated our REST APIs smoothly,
+                    ensured robust error handling, and delivered high-quality
+                    Dart code."
+                  </p>
+                  <div class="testimonial-author">
+                    <div class="author-avatar" aria-hidden="true">TS</div>
+                    <div class="author-info">
+                      <strong class="author-name">— Demo Client</strong>
+                      <span class="author-role">Freelance Project (Demo)</span>
+                    </div>
+                  </div>
+                </article>
+
+                <!-- Testimonial 3 (Demo) -->
+                <article class="testimonial-card" data-index="2">
+                  <div class="quote-icon" aria-hidden="true">“</div>
+                  <p class="testimonial-text">
+                    "Very impressed by the attention to detail in the UI
+                    implementation and local SQLite database persistence. Prompt
+                    delivery, high-quality code comments, and zero hassle
+                    throughout the project."
+                  </p>
+                  <div class="testimonial-author">
+                    <div class="author-avatar" aria-hidden="true">AR</div>
+                    <div class="author-info">
+                      <strong class="author-name">— Demo Client</strong>
+                      <span class="author-role">Khamsat Client (Demo)</span>
+                    </div>
+                  </div>
+                </article>
+
+                <!-- Testimonial 4 (Demo) -->
+                <article class="testimonial-card" data-index="3">
+                  <div class="quote-icon" aria-hidden="true">“</div>
+                  <p class="testimonial-text">
+                    "Mohamed tackled our Firebase authentication and Firestore
+                    syncing requirements with skill and precision. A dedicated
+                    engineering student, fast learner, and great collaborator to
+                    work with."
+                  </p>
+                  <div class="testimonial-author">
+                    <div class="author-avatar" aria-hidden="true">MK</div>
+                    <div class="author-info">
+                      <strong class="author-name">— Demo Client</strong>
+                      <span class="author-role">Mobile App Startup (Demo)</span>
+                    </div>
+                  </div>
+                </article>
+              </div>
+            </div>
+
+            <!-- Navigation Arrow (Next) -->
+            <button
+              type="button"
+              class="carousel-arrow next-arrow"
+              id="carousel-next-btn"
+              aria-label="Next testimonial"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                width="20"
+                height="20"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <polyline points="9 18 15 12 9 6"></polyline>
+              </svg>
+            </button>
+          </div>
+
+          <!-- Dot Indicators -->
+          <div
+            class="carousel-dots"
+            id="carousel-dots"
+            role="tablist"
+            aria-label="Testimonial slides pagination"
+          >
+            <!-- Dots dynamically created or synchronized by script.js -->
+            <button
+              type="button"
+              class="carousel-dot active"
+              role="tab"
+              aria-selected="true"
+              aria-label="Slide 1"
+              data-index="0"
+            ></button>
+            <button
+              type="button"
+              class="carousel-dot"
+              role="tab"
+              aria-selected="false"
+              aria-label="Slide 2"
+              data-index="1"
+            ></button>
+            <button
+              type="button"
+              class="carousel-dot"
+              role="tab"
+              aria-selected="false"
+              aria-label="Slide 3"
+              data-index="2"
+            ></button>
+            <button
+              type="button"
+              class="carousel-dot"
+              role="tab"
+              aria-selected="false"
+              aria-label="Slide 4"
+              data-index="3"
+            ></button>
+          </div>
+        </div>
+      </section>
+
+      <!-- =======================================================================
+         SECTION 8: SERVICES
+         ======================================================================= -->
+      <section
+        class="section services-section"
+        id="services"
+        aria-labelledby="services-title"
+      >
+        <div class="container">
+          <div class="section-header text-center reveal-item">
+            <span class="section-eyebrow">WHAT I OFFER</span>
+            <h2 class="section-title" id="services-title">Services</h2>
+            <p class="section-subtitle">
+              Core development capabilities aligned with modern mobile
+              engineering standards.
+            </p>
+            <div class="section-divider" aria-hidden="true"></div>
+          </div>
+
+          <div class="services-grid">
+            <!-- Service 1: Flutter Development -->
+            <article class="service-card reveal-item">
+              <div class="service-icon-box" aria-hidden="true">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  width="28"
+                  height="28"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
+                  <line x1="12" y1="18" x2="12.01" y2="18"></line>
+                </svg>
+              </div>
+              <h3 class="service-title">Flutter Development</h3>
+              <p class="service-desc">
+                Building responsive, high-performance cross-platform mobile
+                applications for Android and iOS using Flutter and Dart.
+              </p>
+            </article>
+
+            <!-- Service 2: API Integration -->
+            <article class="service-card reveal-item">
+              <div class="service-icon-box" aria-hidden="true">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  width="28"
+                  height="28"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <line x1="2" y1="12" x2="22" y2="12"></line>
+                  <path
+                    d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"
+                  ></path>
+                </svg>
+              </div>
+              <h3 class="service-title">API Integration</h3>
+              <p class="service-desc">
+                Connecting RESTful APIs, parsing JSON payloads, handling
+                authentication headers, and synchronizing remote data
+                seamlessly.
+              </p>
+            </article>
+
+            <!-- Service 3: Firebase Integration -->
+            <article class="service-card reveal-item">
+              <div class="service-icon-box" aria-hidden="true">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  width="28"
+                  height="28"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path
+                    d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"
+                  ></path>
+                </svg>
+              </div>
+              <h3 class="service-title">Firebase Integration</h3>
+              <p class="service-desc">
+                Implementing Firebase Authentication, Firestore cloud databases,
+                and real-time backend cloud capabilities for mobile
+                applications.
+              </p>
+            </article>
+
+            <!-- Service 4: Local Database -->
+            <article class="service-card reveal-item">
+              <div class="service-icon-box" aria-hidden="true">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  width="28"
+                  height="28"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
+                  <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path>
+                  <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
+                </svg>
+              </div>
+              <h3 class="service-title">Local Database</h3>
+              <p class="service-desc">
+                Architecting offline persistence with SQLite databases and
+                caching user preferences and session data via Shared
+                Preferences.
+              </p>
+            </article>
+
+            <!-- Service 5: State Management -->
+            <article class="service-card reveal-item">
+              <div class="service-icon-box" aria-hidden="true">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  width="28"
+                  height="28"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+                </svg>
+              </div>
+              <h3 class="service-title">State Management</h3>
+              <p class="service-desc">
+                Structuring scalable, predictable application state using Cubit
+                and BLoC patterns under clean MVVM architecture.
+              </p>
+            </article>
+
+            <!-- Service 6: PHP / Backend Integration -->
+            <article class="service-card reveal-item">
+              <div class="service-icon-box" aria-hidden="true">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  width="28"
+                  height="28"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect>
+                  <rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect>
+                  <line x1="6" y1="6" x2="6.01" y2="6"></line>
+                  <line x1="6" y1="18" x2="6.01" y2="18"></line>
+                </svg>
+              </div>
+              <h3 class="service-title">PHP / Backend Integration</h3>
+              <p class="service-desc">
+                Integrating backend services, custom PHP scripts, and API
+                payloads for smooth data flow between server and mobile client.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- =======================================================================
+         SECTION 9: GET IN TOUCH (Contact Cards, Direct Actions & Quick Form)
+         ======================================================================= -->
+      <section
+        class="section contact-section"
+        id="contact"
+        aria-labelledby="contact-title"
+      >
+        <div class="container">
+          <div class="section-header text-center reveal-item">
+            <span class="section-eyebrow">LET'S CONNECT</span>
+            <h2 class="section-title" id="contact-title">Get In Touch</h2>
+            <p class="section-subtitle">
+              Have a project, freelance opportunity, or question? Feel free to
+              reach out directly.
+            </p>
+            <div class="section-divider" aria-hidden="true"></div>
+          </div>
+
+          <!-- Two Main Contact Cards -->
+          <div class="contact-cards-grid">
+            <!-- Card 1: Email -->
+            <article class="contact-card reveal-item">
+              <div class="contact-card-icon" aria-hidden="true">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  width="32"
+                  height="32"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path
+                    d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+                  ></path>
+                  <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+              </div>
+              <div class="contact-card-details">
+                <span class="contact-type">Email Address</span>
+                <a
+                  href="mailto:YOUR_EMAIL@gmail.com"
+                  class="contact-value"
+                  id="contact-email-link"
+                  >YOUR_EMAIL@gmail.com</a
+                >
+                <span class="contact-hint"
+                  >Click to launch your email client</span
+                >
+              </div>
+              <div class="contact-card-btn-group">
+                <a
+                  href="mailto:YOUR_EMAIL@gmail.com"
+                  class="btn btn-sm btn-primary"
+                  id="email-me-btn"
+                  >Email Me</a
+                >
+                <button
+                  type="button"
+                  class="btn btn-sm btn-outline copy-btn"
+                  id="copy-email-btn"
+                  data-copy="dev.mohamdzakaria/@gmail.com"
+                  aria-label="Copy email address to clipboard"
+                >
+                  Copy
+                </button>
+              </div>
+            </article>
+
+            <!-- Card 2: WhatsApp -->
+            <article class="contact-card reveal-item">
+              <div class="contact-card-icon" aria-hidden="true">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  width="32"
+                  height="32"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path
+                    d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"
+                  ></path>
+                </svg>
+              </div>
+              <div class="contact-card-details">
+                <span class="contact-type">WhatsApp</span>
+                <a
+                  href="https://wa.me/+201125805270"
+                  class="contact-value"
+                  id="contact-whatsapp-link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >YOUR_WHATSAPP_NUMBER</a
+                >
+                <span class="contact-hint"
+                  >Click to start a WhatsApp conversation</span
+                >
+              </div>
+              <div class="contact-card-btn-group">
+                <a
+                  href="https://wa.me/YOUR_WHATSAPP_NUMBER"
+                  class="btn btn-sm btn-primary"
+                  id="whatsapp-me-btn"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >WhatsApp Me</a
+                >
+                <button
+                  type="button"
+                  class="btn btn-sm btn-outline copy-btn"
+                  id="copy-whatsapp-btn"
+                  data-copy="YOUR_WHATSAPP_NUMBER"
+                  aria-label="Copy WhatsApp number to clipboard"
+                >
+                  Copy
+                </button>
+              </div>
+            </article>
+          </div>
+
+          <!-- Action Button Bar -->
+          <div class="contact-actions-bar reveal-item">
+            <a
+              href="assets/cv/Mohamed-Zakaria-CV.pdf"
+              class="btn btn-primary"
+              download="Mohamed-Zakaria-CV.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <svg
+                class="btn-icon"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                width="16"
+                height="16"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
                 <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
                 <polyline points="7 10 12 15 17 10"></polyline>
                 <line x1="12" y1="15" x2="12" y2="3"></line>
@@ -214,1049 +1790,358 @@
               <span>Hire Me</span>
             </a>
 
-            <!-- Secondary Action: View Projects -->
-            <a href="#projects" class="btn btn-secondary" id="hero-projects-btn">
+            <a href="#projects" class="btn btn-secondary">
               <span>View Projects</span>
-              <svg class="btn-icon-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16"
-                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                aria-hidden="true">
-                <line x1="7" y1="17" x2="17" y2="7"></line>
-                <polyline points="7 7 17 7 17 17"></polyline>
-              </svg>
-            </a>
-          </div>
-
-          <!-- Social Icon Links -->
-          <div class="hero-socials">
-            <span class="socials-label">Connect:</span>
-            <!-- LinkedIn -->
-            <a href="https://linkedin.com/in/YOUR_LINKEDIN_USERNAME" class="social-link" id="social-linkedin"
-              target="_blank" rel="noopener noreferrer"
-              aria-label="Visit Mohamed Zakaria's LinkedIn profile (placeholder link)">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" fill="none"
-                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                aria-hidden="true">
-                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
-                <rect x="2" y="9" width="4" height="12"></rect>
-                <circle cx="4" cy="4" r="2"></circle>
-              </svg>
-              <span class="sr-only">LinkedIn</span>
             </a>
 
-            <!-- GitHub -->
-            <a href="https://github.com/YOUR_GITHUB_USERNAME" class="social-link" id="social-github" target="_blank"
-              rel="noopener noreferrer" aria-label="Visit Mohamed Zakaria's GitHub profile (placeholder link)">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" fill="none"
-                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                aria-hidden="true">
+            <a
+              href="assets/cv/Mohamed-Zakaria-CV.pdf"
+              class="btn btn-outline"
+              download="Mohamed-Zakaria-CV.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <svg
+                class="btn-icon"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                width="16"
+                height="16"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
                 <path
-                  d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
-                </path>
+                  d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"
+                ></path>
+                <polyline points="14 2 14 8 20 8"></polyline>
               </svg>
-              <span class="sr-only">GitHub</span>
+              <span>Download CV</span>
             </a>
 
-            <!-- Gmail -->
-            <a href="mailto:YOUR_EMAIL@gmail.com" class="social-link" id="social-email"
-              aria-label="Send an email to Mohamed Zakaria (placeholder link)">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" fill="none"
-                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                aria-hidden="true">
-                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-                <polyline points="22,6 12,13 2,6"></polyline>
-              </svg>
-              <span class="sr-only">Gmail</span>
+            <a href="mailto:YOUR_EMAIL@gmail.com" class="btn btn-outline">
+              <span>Email Me</span>
+            </a>
+
+            <a
+              href="https://wa.me/YOUR_WHATSAPP_NUMBER"
+              class="btn btn-outline"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span>WhatsApp Me</span>
             </a>
           </div>
-        </div>
 
-        <!-- Hero Avatar (Right) -->
-        <div class="hero-visual reveal-item">
-          <div class="avatar-ring-container">
-            <div class="avatar-glow-pulse" aria-hidden="true"></div>
-            <div class="avatar-frame">
-              <img src="assets/images/profile-avatar.svg"
-                alt="Portrait illustration of Mohamed Zakaria, Flutter Developer" class="hero-avatar-img" width="340"
-                height="340" loading="eager">
-            </div>
-            <!-- Floating Mini Badge -->
-            <div class="avatar-float-badge float-top" aria-hidden="true">
-              <span class="float-icon">📱</span>
-              <span class="float-text">Flutter &amp; Dart</span>
-            </div>
-            <div class="avatar-float-badge float-bottom" aria-hidden="true">
-              <span class="float-icon">⚡</span>
-              <span class="float-text">Clean Code</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- =======================================================================
-         SECTION 2: ABOUT
-         ======================================================================= -->
-    <section class="section about-section" id="about" aria-labelledby="about-title">
-      <div class="container">
-        <div class="section-header text-center reveal-item">
-          <span class="section-eyebrow">ABOUT ME</span>
-          <h2 class="section-title" id="about-title">Software Engineering Meets Mobile Craft</h2>
-          <div class="section-divider" aria-hidden="true"></div>
-        </div>
-
-        <div class="about-grid">
-          <!-- Left: Visual Illustration -->
-          <div class="about-visual reveal-item">
-            <div class="about-image-card">
-              <img src="assets/images/about-visual.svg"
-                alt="Architecture overview depicting Flutter UI, Cubit state management, and persistence layers"
-                class="about-svg-img" width="520" height="420" loading="lazy">
-              <div class="about-image-overlay">
-                <span class="card-caption">Clean Architecture • Scalable Mobile Systems</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Right: Professional Bio & Stats -->
-          <div class="about-content reveal-item">
-            <h3 class="about-subtitle">Building Resilient Mobile Applications</h3>
-            <p class="about-text">
-              I am a Computer and Systems Engineering student at Zagazig University with a focused specialization in
-              mobile application development using Flutter and Dart. My academic curriculum provides a rigorous
-              foundation in algorithms, data structures, operating systems, and database systems.
-            </p>
-            <p class="about-text">
-              In my software engineering projects, I apply Clean Architecture and MVVM patterns combined with Cubit for
-              predictable, reactive state management. I build smooth user interfaces, integrate RESTful APIs with robust
-              error handling, and implement cloud services like Firebase along with local SQLite databases.
-            </p>
-            <p class="about-text">
-              Passionate about continuous learning, I actively refine my development workflow, explore emerging mobile
-              technologies, and write clean, modular, and maintainable Dart code.
+          <!-- Quick Contact Form -->
+          <div class="contact-form-card reveal-item">
+            <h3 class="form-title">Send a Direct Message</h3>
+            <p class="form-subtitle">
+              Fill in the fields below to initiate an email message directly.
             </p>
 
-            <!-- 3 Statistic Cards -->
-            <div class="about-stats-grid">
-              <div class="stat-card">
-                <span class="stat-number">Entry Level</span>
-                <span class="stat-label">Developer Level</span>
-              </div>
-              <div class="stat-card">
-                <span class="stat-number">3+</span>
-                <span class="stat-label">Projects Built</span>
-              </div>
-              <div class="stat-card">
-                <span class="stat-number">Flutter</span>
-                <span class="stat-label">Primary Stack</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- =======================================================================
-         SECTION 3: EDUCATION
-         ======================================================================= -->
-    <section class="section education-section" id="education" aria-labelledby="education-title">
-      <div class="container">
-        <div class="section-header text-center reveal-item">
-          <span class="section-eyebrow">ACADEMIC BACKGROUND</span>
-          <h2 class="section-title" id="education-title">Education</h2>
-          <div class="section-divider" aria-hidden="true"></div>
-        </div>
-
-        <div class="education-card-container reveal-item">
-          <article class="education-card">
-            <div class="education-card-header">
-              <div class="edu-icon-badge" aria-hidden="true">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="28" height="28" fill="none"
-                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
-                  <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
-                </svg>
-              </div>
-              <div class="edu-title-group">
-                <h3 class="edu-degree">Computer and Systems Engineering</h3>
-                <p class="edu-institution">Zagazig University</p>
-              </div>
-              <div class="edu-grade-badge">
-                <span class="grade-label">Academic Grade</span>
-                <span class="grade-value">Very Good</span>
-              </div>
-            </div>
-
-            <div class="education-card-body">
-              <p class="edu-description">
-                Engineering studies covering computer systems, programming, software development, algorithms, databases,
-                and related engineering disciplines.
-              </p>
-
-              <div class="edu-curriculum">
-                <h4 class="curriculum-heading">Key Engineering Disciplines:</h4>
-                <div class="curriculum-tags">
-                  <span class="tag">Algorithms &amp; Data Structures</span>
-                  <span class="tag">Object-Oriented Programming (OOP)</span>
-                  <span class="tag">Database Management Systems (SQL)</span>
-                  <span class="tag">Software Engineering Principles</span>
-                  <span class="tag">Operating Systems &amp; Computer Architecture</span>
-                  <span class="tag">Computer Networks</span>
+            <form id="contact-form" class="contact-form" novalidate>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="contact-name" class="form-label"
+                    >Your Name <span class="required">*</span></label
+                  >
+                  <input
+                    type="text"
+                    id="contact-name"
+                    name="name"
+                    class="form-input"
+                    placeholder="e.g. Sarah Miller"
+                    required
+                    autocomplete="name"
+                  />
+                  <span class="form-error" id="name-error"
+                    >Please enter your name.</span
+                  >
+                </div>
+                <div class="form-group">
+                  <label for="contact-email" class="form-label"
+                    >Your Email <span class="required">*</span></label
+                  >
+                  <input
+                    type="email"
+                    id="contact-email"
+                    name="email"
+                    class="form-input"
+                    placeholder="e.g. sarah@example.com"
+                    required
+                    autocomplete="email"
+                  />
+                  <span class="form-error" id="email-error"
+                    >Please enter a valid email address.</span
+                  >
                 </div>
               </div>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
 
-    <!-- =======================================================================
-         SECTION 4: EXPERIENCE
-         ======================================================================= -->
-    <section class="section experience-section" id="experience" aria-labelledby="experience-title">
-      <div class="container">
-        <div class="section-header text-center reveal-item">
-          <span class="section-eyebrow">WORK HISTORY</span>
-          <h2 class="section-title" id="experience-title">Experience</h2>
-          <div class="section-divider" aria-hidden="true"></div>
-        </div>
-
-        <!-- Vertical Timeline Structure -->
-        <div class="timeline-wrapper">
-          <div class="timeline-spine" aria-hidden="true"></div>
-
-          <!-- Timeline Item 1: Freelance / Self-employed -->
-          <div class="timeline-item reveal-item">
-            <div class="timeline-marker" aria-hidden="true">
-              <div class="marker-dot"></div>
-            </div>
-            <article class="timeline-card">
-              <div class="card-meta">
-                <span class="timeline-platform">Freelance / Self-employed</span>
-                <!-- Placeholder date: replace when actual timeframe is ready -->
-                <span class="timeline-period">2024 — Present</span>
-              </div>
-              <h3 class="timeline-role">Flutter Developer</h3>
-              <p class="timeline-description">
-                Building Flutter applications, implementing responsive interfaces, integrating APIs and backend
-                services, and applying reusable architecture and state-management patterns.
-              </p>
-              <div class="timeline-tags">
-                <span class="tag">Flutter</span>
-                <span class="tag">Dart</span>
-                <span class="tag">MVVM</span>
-                <span class="tag">Cubit / BLoC</span>
-                <span class="tag">REST APIs</span>
-              </div>
-            </article>
-          </div>
-
-          <!-- Timeline Item 2: Upwork -->
-          <div class="timeline-item reveal-item">
-            <div class="timeline-marker" aria-hidden="true">
-              <div class="marker-dot"></div>
-            </div>
-            <article class="timeline-card">
-              <div class="card-meta">
-                <span class="timeline-platform">Upwork</span>
-                <!-- Placeholder date -->
-                <span class="timeline-period">2024 — Present</span>
-              </div>
-              <h3 class="timeline-role">Freelance Developer</h3>
-              <p class="timeline-description">
-                Delivering client-focused mobile application features, resolving UI layout and state management issues,
-                and integrating RESTful services for deliverables.
-              </p>
-              <div class="timeline-tags">
-                <span class="tag">Mobile UI</span>
-                <span class="tag">State Management</span>
-                <span class="tag">Client Delivery</span>
-                <span class="tag">Bug Fixing</span>
-              </div>
-            </article>
-          </div>
-
-          <!-- Timeline Item 3: Khamsat -->
-          <div class="timeline-item reveal-item">
-            <div class="timeline-marker" aria-hidden="true">
-              <div class="marker-dot"></div>
-            </div>
-            <article class="timeline-card">
-              <div class="card-meta">
-                <span class="timeline-platform">Khamsat</span>
-                <!-- Placeholder date -->
-                <span class="timeline-period">2023 — Present</span>
-              </div>
-              <h3 class="timeline-role">Freelance Developer</h3>
-              <p class="timeline-description">
-                Developing responsive Flutter mobile components, implementing UI screens according to client
-                specifications, and assisting with mobile bug resolution.
-              </p>
-              <div class="timeline-tags">
-                <span class="tag">Flutter</span>
-                <span class="tag">Dart</span>
-                <span class="tag">Responsive UI</span>
-                <span class="tag">Local Cache</span>
-              </div>
-            </article>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- =======================================================================
-         SECTION 5: SKILLS
-         ======================================================================= -->
-    <section class="section skills-section" id="skills" aria-labelledby="skills-title">
-      <div class="container">
-        <div class="section-header text-center reveal-item">
-          <span class="section-eyebrow">PROFICIENCIES</span>
-          <h2 class="section-title" id="skills-title">Skills &amp; Technologies</h2>
-          <p class="section-subtitle">
-            Self-assessed proficiency ratings for personal development tracking; not certified test metrics.
-          </p>
-          <div class="section-divider" aria-hidden="true"></div>
-        </div>
-
-        <!-- Category Filter Buttons -->
-        <div class="skills-filter-container reveal-item" role="tablist" aria-label="Skills Category Filter">
-          <button type="button" class="skills-filter-btn active" data-filter="all" role="tab" aria-selected="true"
-            id="tab-all">All Skills</button>
-          <button type="button" class="skills-filter-btn" data-filter="technical" role="tab" aria-selected="false"
-            id="tab-tech">Technical Skills</button>
-          <button type="button" class="skills-filter-btn" data-filter="non-technical" role="tab" aria-selected="false"
-            id="tab-nontech">Non-Technical Skills</button>
-        </div>
-
-        <!-- Skills Grid (Rendered and updated by script.js using portfolioData) -->
-        <div class="skills-grid" id="skills-grid" aria-live="polite">
-          <!-- Dynamically populated by script.js; fallback HTML for SEO/no-JS below -->
-          <div class="skill-group technical-group" data-category="technical">
-            <h3 class="skill-group-title">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" fill="none"
-                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                aria-hidden="true">
-                <polyline points="16 18 22 12 16 6"></polyline>
-                <polyline points="8 6 2 12 8 18"></polyline>
-              </svg>
-              Technical Skills
-            </h3>
-            <div class="skill-items-container" id="technical-skills-list">
-              <!-- Technical skills rendered by script.js -->
-            </div>
-          </div>
-
-          <div class="skill-group nontechnical-group" data-category="non-technical">
-            <h3 class="skill-group-title">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" fill="none"
-                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                aria-hidden="true">
-                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
-                <circle cx="9" cy="7" r="4"></circle>
-                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
-                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
-              </svg>
-              Non-Technical Skills
-            </h3>
-            <div class="skill-items-container" id="nontechnical-skills-list">
-              <!-- Non-technical skills rendered by script.js -->
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- =======================================================================
-         SECTION 6: PROJECTS
-         ======================================================================= -->
-    <section class="section projects-section" id="projects" aria-labelledby="projects-title">
-      <div class="container">
-        <div class="section-header text-center reveal-item">
-          <span class="section-eyebrow">PORTFOLIO WORK</span>
-          <h2 class="section-title" id="projects-title">Featured Mobile Projects</h2>
-          <p class="section-subtitle">
-            Real-world mobile apps built with Flutter, clean architecture, and modern state management.
-          </p>
-          <div class="section-divider" aria-hidden="true"></div>
-        </div>
-
-        <div class="projects-grid">
-
-          <!-- PROJECT 1: News App -->
-          <article class="project-card reveal-item" id="project-card-news">
-            <div class="project-image-box">
-              <img src="assets/images/project-news.svg" alt="Flutter News App with MVVM and Cubit architecture preview"
-                class="project-thumb-img" width="600" height="380" loading="lazy">
-              <div class="project-badge-overlay">
-                <span class="pill-badge">MVVM • Cubit</span>
-              </div>
-            </div>
-            <div class="project-body">
-              <h3 class="project-name">News App</h3>
-              <p class="project-desc">
-                A modern mobile news application with MVVM architecture and Cubit for reactive state management,
-                featuring dynamic categorization, REST API feeds, and offline caching.
-              </p>
-
-              <!-- Technologies -->
-              <div class="project-tech-list">
-                <span class="tag">Flutter</span>
-                <span class="tag">Dart</span>
-                <span class="tag">REST API</span>
-                <span class="tag">Cubit</span>
-                <span class="tag">MVVM</span>
-                <span class="tag">Shared Preferences</span>
-              </div>
-
-              <!-- Project Actions -->
-              <div class="project-actions">
-                <a href="https://github.com/YOUR_GITHUB_USERNAME/flutter-news-app" class="btn btn-sm btn-outline"
-                  target="_blank" rel="noopener noreferrer"
-                  aria-label="View News App source code on GitHub (placeholder link)">
-                  <svg class="btn-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16"
-                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                    aria-hidden="true">
-                    <path
-                      d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
-                    </path>
-                  </svg>
-                  <span>GitHub</span>
-                </a>
-                <button type="button" class="btn btn-sm btn-secondary project-detail-btn" data-project="news"
-                  aria-label="View interactive details for News App">
-                  <svg class="btn-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16"
-                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                    aria-hidden="true">
-                    <circle cx="12" cy="12" r="10"></circle>
-                    <line x1="12" y1="16" x2="12" y2="12"></line>
-                    <line x1="12" y1="8" x2="12.01" y2="8"></line>
-                  </svg>
-                  <span>Live Details</span>
-                </button>
-              </div>
-            </div>
-          </article>
-
-          <!-- PROJECT 2: E-Commerce App -->
-          <article class="project-card reveal-item" id="project-card-ecommerce">
-            <div class="project-image-box">
-              <img src="assets/images/project-ecommerce.svg"
-                alt="Flutter E-Commerce App with Firebase Auth and Firestore preview" class="project-thumb-img"
-                width="600" height="380" loading="lazy">
-              <div class="project-badge-overlay">
-                <span class="pill-badge">Firebase • MVVM</span>
-              </div>
-            </div>
-            <div class="project-body">
-              <h3 class="project-name">E-Commerce App</h3>
-              <p class="project-desc">
-                Full-featured mobile commerce platform featuring Firebase Authentication, live Firestore product
-                synchronization, dynamic cart, wishlist, and user profile management.
-              </p>
-
-              <!-- Technologies -->
-              <div class="project-tech-list">
-                <span class="tag">Flutter</span>
-                <span class="tag">Dart</span>
-                <span class="tag">Firebase Auth</span>
-                <span class="tag">Firestore</span>
-                <span class="tag">Cubit</span>
-                <span class="tag">MVVM</span>
-                <span class="tag">Shared Preferences</span>
-              </div>
-
-              <!-- Project Actions -->
-              <div class="project-actions">
-                <a href="https://github.com/YOUR_GITHUB_USERNAME/flutter-ecommerce-app" class="btn btn-sm btn-outline"
-                  target="_blank" rel="noopener noreferrer"
-                  aria-label="View E-Commerce App source code on GitHub (placeholder link)">
-                  <svg class="btn-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16"
-                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                    aria-hidden="true">
-                    <path
-                      d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
-                    </path>
-                  </svg>
-                  <span>GitHub</span>
-                </a>
-                <button type="button" class="btn btn-sm btn-secondary project-detail-btn" data-project="ecommerce"
-                  aria-label="View interactive details for E-Commerce App">
-                  <svg class="btn-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16"
-                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                    aria-hidden="true">
-                    <circle cx="12" cy="12" r="10"></circle>
-                    <line x1="12" y1="16" x2="12" y2="12"></line>
-                    <line x1="12" y1="8" x2="12.01" y2="8"></line>
-                  </svg>
-                  <span>Live Details</span>
-                </button>
-              </div>
-            </div>
-          </article>
-
-          <!-- PROJECT 3: To-Do App -->
-          <article class="project-card reveal-item" id="project-card-todo">
-            <div class="project-image-box">
-              <img src="assets/images/project-todo.svg"
-                alt="Flutter To-Do App with SQLite persistence and Cubit preview" class="project-thumb-img" width="600"
-                height="380" loading="lazy">
-              <div class="project-badge-overlay">
-                <span class="pill-badge">SQLite • Cubit</span>
-              </div>
-            </div>
-            <div class="project-body">
-              <h3 class="project-name">To-Do App</h3>
-              <p class="project-desc">
-                High-performance productivity app providing offline-first task management with SQLite database
-                persistence, task status filtering, priority tagging, and Cubit state management.
-              </p>
-
-              <!-- Technologies -->
-              <div class="project-tech-list">
-                <span class="tag">Flutter</span>
-                <span class="tag">Dart</span>
-                <span class="tag">SQLite</span>
-                <span class="tag">Cubit</span>
-                <span class="tag">Shared Preferences</span>
-              </div>
-
-              <!-- Project Actions -->
-              <div class="project-actions">
-                <a href="https://github.com/YOUR_GITHUB_USERNAME/flutter-todo-app" class="btn btn-sm btn-outline"
-                  target="_blank" rel="noopener noreferrer"
-                  aria-label="View To-Do App source code on GitHub (placeholder link)">
-                  <svg class="btn-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16"
-                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                    aria-hidden="true">
-                    <path
-                      d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
-                    </path>
-                  </svg>
-                  <span>GitHub</span>
-                </a>
-                <button type="button" class="btn btn-sm btn-secondary project-detail-btn" data-project="todo"
-                  aria-label="View interactive details for To-Do App">
-                  <svg class="btn-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16"
-                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                    aria-hidden="true">
-                    <circle cx="12" cy="12" r="10"></circle>
-                    <line x1="12" y1="16" x2="12" y2="12"></line>
-                    <line x1="12" y1="8" x2="12.01" y2="8"></line>
-                  </svg>
-                  <span>Live Details</span>
-                </button>
-              </div>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- =======================================================================
-         SECTION 7: TESTIMONIALS (Horizontal Carousel, Accessible, Demo Data)
-         ======================================================================= -->
-    <section class="section testimonials-section" id="testimonials" aria-labelledby="testimonials-title">
-      <div class="container">
-        <div class="section-header text-center reveal-item">
-          <span class="section-eyebrow">FEEDBACK</span>
-          <h2 class="section-title" id="testimonials-title">Testimonials</h2>
-          <div class="demo-badge-notice">
-            <span class="badge-dot" aria-hidden="true"></span>
-            <span>Demo Content — Illustrative placeholders for presentation quality</span>
-          </div>
-          <div class="section-divider" aria-hidden="true"></div>
-        </div>
-
-        <!-- Carousel Container -->
-        <div class="testimonials-carousel-wrapper reveal-item">
-          <!-- Navigation Arrow (Prev) -->
-          <button type="button" class="carousel-arrow prev-arrow" id="carousel-prev-btn"
-            aria-label="Previous testimonial">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="none"
-              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <polyline points="15 18 9 12 15 6"></polyline>
-            </svg>
-          </button>
-
-          <!-- Track Container -->
-          <div class="testimonials-track-container" id="testimonials-track-container">
-            <div class="testimonials-track" id="testimonials-track" role="region" aria-label="Testimonial slider"
-              aria-live="polite">
-
-              <!-- Testimonial 1 (Demo) -->
-              <article class="testimonial-card" data-index="0">
-                <div class="quote-icon" aria-hidden="true">“</div>
-                <p class="testimonial-text">
-                  "Mohamed delivered our Flutter application on schedule with clean MVVM architecture and responsive
-                  layouts. His communication throughout the sprint was exemplary, and state transitions were handled
-                  flawlessly."
-                </p>
-                <div class="testimonial-author">
-                  <div class="author-avatar" aria-hidden="true">DC</div>
-                  <div class="author-info">
-                    <strong class="author-name">— Demo Client</strong>
-                    <span class="author-role">Upwork Project Partner (Demo)</span>
-                  </div>
-                </div>
-              </article>
-
-              <!-- Testimonial 2 (Demo) -->
-              <article class="testimonial-card" data-index="1">
-                <div class="quote-icon" aria-hidden="true">“</div>
-                <p class="testimonial-text">
-                  "Excellent mobile developer who deeply understands state management with Cubit. He integrated our REST
-                  APIs smoothly, ensured robust error handling, and delivered high-quality Dart code."
-                </p>
-                <div class="testimonial-author">
-                  <div class="author-avatar" aria-hidden="true">TS</div>
-                  <div class="author-info">
-                    <strong class="author-name">— Demo Client</strong>
-                    <span class="author-role">Freelance Project (Demo)</span>
-                  </div>
-                </div>
-              </article>
-
-              <!-- Testimonial 3 (Demo) -->
-              <article class="testimonial-card" data-index="2">
-                <div class="quote-icon" aria-hidden="true">“</div>
-                <p class="testimonial-text">
-                  "Very impressed by the attention to detail in the UI implementation and local SQLite database
-                  persistence. Prompt delivery, high-quality code comments, and zero hassle throughout the project."
-                </p>
-                <div class="testimonial-author">
-                  <div class="author-avatar" aria-hidden="true">AR</div>
-                  <div class="author-info">
-                    <strong class="author-name">— Demo Client</strong>
-                    <span class="author-role">Khamsat Client (Demo)</span>
-                  </div>
-                </div>
-              </article>
-
-              <!-- Testimonial 4 (Demo) -->
-              <article class="testimonial-card" data-index="3">
-                <div class="quote-icon" aria-hidden="true">“</div>
-                <p class="testimonial-text">
-                  "Mohamed tackled our Firebase authentication and Firestore syncing requirements with skill and
-                  precision. A dedicated engineering student, fast learner, and great collaborator to work with."
-                </p>
-                <div class="testimonial-author">
-                  <div class="author-avatar" aria-hidden="true">MK</div>
-                  <div class="author-info">
-                    <strong class="author-name">— Demo Client</strong>
-                    <span class="author-role">Mobile App Startup (Demo)</span>
-                  </div>
-                </div>
-              </article>
-
-            </div>
-          </div>
-
-          <!-- Navigation Arrow (Next) -->
-          <button type="button" class="carousel-arrow next-arrow" id="carousel-next-btn" aria-label="Next testimonial">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="none"
-              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <polyline points="9 18 15 12 9 6"></polyline>
-            </svg>
-          </button>
-        </div>
-
-        <!-- Dot Indicators -->
-        <div class="carousel-dots" id="carousel-dots" role="tablist" aria-label="Testimonial slides pagination">
-          <!-- Dots dynamically created or synchronized by script.js -->
-          <button type="button" class="carousel-dot active" role="tab" aria-selected="true" aria-label="Slide 1"
-            data-index="0"></button>
-          <button type="button" class="carousel-dot" role="tab" aria-selected="false" aria-label="Slide 2"
-            data-index="1"></button>
-          <button type="button" class="carousel-dot" role="tab" aria-selected="false" aria-label="Slide 3"
-            data-index="2"></button>
-          <button type="button" class="carousel-dot" role="tab" aria-selected="false" aria-label="Slide 4"
-            data-index="3"></button>
-        </div>
-      </div>
-    </section>
-
-    <!-- =======================================================================
-         SECTION 8: SERVICES
-         ======================================================================= -->
-    <section class="section services-section" id="services" aria-labelledby="services-title">
-      <div class="container">
-        <div class="section-header text-center reveal-item">
-          <span class="section-eyebrow">WHAT I OFFER</span>
-          <h2 class="section-title" id="services-title">Services</h2>
-          <p class="section-subtitle">
-            Core development capabilities aligned with modern mobile engineering standards.
-          </p>
-          <div class="section-divider" aria-hidden="true"></div>
-        </div>
-
-        <div class="services-grid">
-          <!-- Service 1: Flutter Development -->
-          <article class="service-card reveal-item">
-            <div class="service-icon-box" aria-hidden="true">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="28" height="28" fill="none"
-                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
-                <line x1="12" y1="18" x2="12.01" y2="18"></line>
-              </svg>
-            </div>
-            <h3 class="service-title">Flutter Development</h3>
-            <p class="service-desc">
-              Building responsive, high-performance cross-platform mobile applications for Android and iOS using Flutter
-              and Dart.
-            </p>
-          </article>
-
-          <!-- Service 2: API Integration -->
-          <article class="service-card reveal-item">
-            <div class="service-icon-box" aria-hidden="true">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="28" height="28" fill="none"
-                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <circle cx="12" cy="12" r="10"></circle>
-                <line x1="2" y1="12" x2="22" y2="12"></line>
-                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z">
-                </path>
-              </svg>
-            </div>
-            <h3 class="service-title">API Integration</h3>
-            <p class="service-desc">
-              Connecting RESTful APIs, parsing JSON payloads, handling authentication headers, and synchronizing remote
-              data seamlessly.
-            </p>
-          </article>
-
-          <!-- Service 3: Firebase Integration -->
-          <article class="service-card reveal-item">
-            <div class="service-icon-box" aria-hidden="true">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="28" height="28" fill="none"
-                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path
-                  d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z">
-                </path>
-              </svg>
-            </div>
-            <h3 class="service-title">Firebase Integration</h3>
-            <p class="service-desc">
-              Implementing Firebase Authentication, Firestore cloud databases, and real-time backend cloud capabilities
-              for mobile applications.
-            </p>
-          </article>
-
-          <!-- Service 4: Local Database -->
-          <article class="service-card reveal-item">
-            <div class="service-icon-box" aria-hidden="true">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="28" height="28" fill="none"
-                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
-                <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path>
-                <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
-              </svg>
-            </div>
-            <h3 class="service-title">Local Database</h3>
-            <p class="service-desc">
-              Architecting offline persistence with SQLite databases and caching user preferences and session data via
-              Shared Preferences.
-            </p>
-          </article>
-
-          <!-- Service 5: State Management -->
-          <article class="service-card reveal-item">
-            <div class="service-icon-box" aria-hidden="true">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="28" height="28" fill="none"
-                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
-              </svg>
-            </div>
-            <h3 class="service-title">State Management</h3>
-            <p class="service-desc">
-              Structuring scalable, predictable application state using Cubit and BLoC patterns under clean MVVM
-              architecture.
-            </p>
-          </article>
-
-          <!-- Service 6: PHP / Backend Integration -->
-          <article class="service-card reveal-item">
-            <div class="service-icon-box" aria-hidden="true">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="28" height="28" fill="none"
-                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect>
-                <rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect>
-                <line x1="6" y1="6" x2="6.01" y2="6"></line>
-                <line x1="6" y1="18" x2="6.01" y2="18"></line>
-              </svg>
-            </div>
-            <h3 class="service-title">PHP / Backend Integration</h3>
-            <p class="service-desc">
-              Integrating backend services, custom PHP scripts, and API payloads for smooth data flow between server and
-              mobile client.
-            </p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- =======================================================================
-         SECTION 9: GET IN TOUCH (Contact Cards, Direct Actions & Quick Form)
-         ======================================================================= -->
-    <section class="section contact-section" id="contact" aria-labelledby="contact-title">
-      <div class="container">
-        <div class="section-header text-center reveal-item">
-          <span class="section-eyebrow">LET'S CONNECT</span>
-          <h2 class="section-title" id="contact-title">Get In Touch</h2>
-          <p class="section-subtitle">
-            Have a project, freelance opportunity, or question? Feel free to reach out directly.
-          </p>
-          <div class="section-divider" aria-hidden="true"></div>
-        </div>
-
-        <!-- Two Main Contact Cards -->
-        <div class="contact-cards-grid">
-
-          <!-- Card 1: Email -->
-          <article class="contact-card reveal-item">
-            <div class="contact-card-icon" aria-hidden="true">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="32" height="32" fill="none"
-                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-                <polyline points="22,6 12,13 2,6"></polyline>
-              </svg>
-            </div>
-            <div class="contact-card-details">
-              <span class="contact-type">Email Address</span>
-              <a href="mailto:YOUR_EMAIL@gmail.com" class="contact-value"
-                id="contact-email-link">YOUR_EMAIL@gmail.com</a>
-              <span class="contact-hint">Click to launch your email client</span>
-            </div>
-            <div class="contact-card-btn-group">
-              <a href="mailto:YOUR_EMAIL@gmail.com" class="btn btn-sm btn-primary" id="email-me-btn">Email Me</a>
-              <button type="button" class="btn btn-sm btn-outline copy-btn" id="copy-email-btn"
-                data-copy="YOUR_EMAIL@gmail.com" aria-label="Copy email address to clipboard">Copy</button>
-            </div>
-          </article>
-
-          <!-- Card 2: WhatsApp -->
-          <article class="contact-card reveal-item">
-            <div class="contact-card-icon" aria-hidden="true">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="32" height="32" fill="none"
-                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path
-                  d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z">
-                </path>
-              </svg>
-            </div>
-            <div class="contact-card-details">
-              <span class="contact-type">WhatsApp</span>
-              <a href="https://wa.me/YOUR_WHATSAPP_NUMBER" class="contact-value" id="contact-whatsapp-link"
-                target="_blank" rel="noopener noreferrer">YOUR_WHATSAPP_NUMBER</a>
-              <span class="contact-hint">Click to start a WhatsApp conversation</span>
-            </div>
-            <div class="contact-card-btn-group">
-              <a href="https://wa.me/YOUR_WHATSAPP_NUMBER" class="btn btn-sm btn-primary" id="whatsapp-me-btn"
-                target="_blank" rel="noopener noreferrer">WhatsApp Me</a>
-              <button type="button" class="btn btn-sm btn-outline copy-btn" id="copy-whatsapp-btn"
-                data-copy="YOUR_WHATSAPP_NUMBER" aria-label="Copy WhatsApp number to clipboard">Copy</button>
-            </div>
-          </article>
-        </div>
-
-        <!-- Action Button Bar -->
-        <div class="contact-actions-bar reveal-item">
-          <a href="assets/cv/Mohamed-Zakaria-CV.pdf" class="btn btn-primary" download="Mohamed-Zakaria-CV.pdf"
-            target="_blank" rel="noopener noreferrer">
-            <svg class="btn-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16"
-              fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-              aria-hidden="true">
-              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
-              <polyline points="7 10 12 15 17 10"></polyline>
-              <line x1="12" y1="15" x2="12" y2="3"></line>
-            </svg>
-            <span>Hire Me</span>
-          </a>
-
-          <a href="#projects" class="btn btn-secondary">
-            <span>View Projects</span>
-          </a>
-
-          <a href="assets/cv/Mohamed-Zakaria-CV.pdf" class="btn btn-outline" download="Mohamed-Zakaria-CV.pdf"
-            target="_blank" rel="noopener noreferrer">
-            <svg class="btn-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16"
-              fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-              aria-hidden="true">
-              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-              <polyline points="14 2 14 8 20 8"></polyline>
-            </svg>
-            <span>Download CV</span>
-          </a>
-
-          <a href="mailto:YOUR_EMAIL@gmail.com" class="btn btn-outline">
-            <span>Email Me</span>
-          </a>
-
-          <a href="https://wa.me/YOUR_WHATSAPP_NUMBER" class="btn btn-outline" target="_blank"
-            rel="noopener noreferrer">
-            <span>WhatsApp Me</span>
-          </a>
-        </div>
-
-        <!-- Quick Contact Form -->
-        <div class="contact-form-card reveal-item">
-          <h3 class="form-title">Send a Direct Message</h3>
-          <p class="form-subtitle">Fill in the fields below to initiate an email message directly.</p>
-
-          <form id="contact-form" class="contact-form" novalidate>
-            <div class="form-row">
               <div class="form-group">
-                <label for="contact-name" class="form-label">Your Name <span class="required">*</span></label>
-                <input type="text" id="contact-name" name="name" class="form-input" placeholder="e.g. Sarah Miller"
-                  required autocomplete="name">
-                <span class="form-error" id="name-error">Please enter your name.</span>
+                <label for="contact-subject" class="form-label"
+                  >Subject <span class="required">*</span></label
+                >
+                <input
+                  type="text"
+                  id="contact-subject"
+                  name="subject"
+                  class="form-input"
+                  placeholder="e.g. Mobile App Development Project"
+                  required
+                />
+                <span class="form-error" id="subject-error"
+                  >Please enter a subject.</span
+                >
               </div>
+
               <div class="form-group">
-                <label for="contact-email" class="form-label">Your Email <span class="required">*</span></label>
-                <input type="email" id="contact-email" name="email" class="form-input"
-                  placeholder="e.g. sarah@example.com" required autocomplete="email">
-                <span class="form-error" id="email-error">Please enter a valid email address.</span>
+                <label for="contact-message" class="form-label"
+                  >Message <span class="required">*</span></label
+                >
+                <textarea
+                  id="contact-message"
+                  name="message"
+                  class="form-textarea"
+                  rows="4"
+                  placeholder="Briefly describe your project, timeline, or inquiry..."
+                  required
+                ></textarea>
+                <span class="form-error" id="message-error"
+                  >Please enter your message.</span
+                >
               </div>
-            </div>
 
-            <div class="form-group">
-              <label for="contact-subject" class="form-label">Subject <span class="required">*</span></label>
-              <input type="text" id="contact-subject" name="subject" class="form-input"
-                placeholder="e.g. Mobile App Development Project" required>
-              <span class="form-error" id="subject-error">Please enter a subject.</span>
-            </div>
-
-            <div class="form-group">
-              <label for="contact-message" class="form-label">Message <span class="required">*</span></label>
-              <textarea id="contact-message" name="message" class="form-textarea" rows="4"
-                placeholder="Briefly describe your project, timeline, or inquiry..." required></textarea>
-              <span class="form-error" id="message-error">Please enter your message.</span>
-            </div>
-
-            <div class="form-actions">
-              <button type="submit" class="btn btn-primary" id="contact-submit-btn">
-                <svg class="btn-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16"
-                  fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                  aria-hidden="true">
-                  <line x1="22" y1="2" x2="11" y2="13"></line>
-                  <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
-                </svg>
-                <span>Send Message</span>
-              </button>
-            </div>
-          </form>
+              <div class="form-actions">
+                <button
+                  type="submit"
+                  class="btn btn-primary"
+                  id="contact-submit-btn"
+                >
+                  <svg
+                    class="btn-icon"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    width="16"
+                    height="16"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                  >
+                    <line x1="22" y1="2" x2="11" y2="13"></line>
+                    <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                  </svg>
+                  <span>Send Message</span>
+                </button>
+              </div>
+            </form>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </main>
 
-  </main>
-
-  <!-- =========================================================================
+    <!-- =========================================================================
        FOOTER
        ========================================================================= -->
-  <footer class="footer">
-    <div class="container footer-container">
-      <div class="footer-top">
-        <div class="footer-brand">
-          <span class="brand-code">&lt;</span>
-          <span class="footer-name">Mohamed Zakaria</span>
-          <span class="brand-code">/&gt;</span>
-          <p class="footer-title">Flutter Developer • Software Engineer</p>
-          <p class="footer-bio">Building clean, modern mobile applications with Flutter &amp; Dart.</p>
-        </div>
+    <footer class="footer">
+      <div class="container footer-container">
+        <div class="footer-top">
+          <div class="footer-brand">
+            <span class="brand-code">&lt;</span>
+            <span class="footer-name">Mohamed Zakaria</span>
+            <span class="brand-code">/&gt;</span>
+            <p class="footer-title">Flutter Developer • Software Engineer</p>
+            <p class="footer-bio">
+              Building clean, modern mobile applications with Flutter &amp;
+              Dart.
+            </p>
+          </div>
 
-        <nav class="footer-nav" aria-label="Footer Navigation">
-          <span class="footer-heading">Navigation</span>
-          <ul class="footer-links">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#education">Education</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </nav>
+          <nav class="footer-nav" aria-label="Footer Navigation">
+            <span class="footer-heading">Navigation</span>
+            <ul class="footer-links">
+              <li><a href="#home">Home</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#education">Education</a></li>
+              <li><a href="#experience">Experience</a></li>
+              <li><a href="#skills">Skills</a></li>
+              <li><a href="#projects">Projects</a></li>
+              <li><a href="#services">Services</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </nav>
 
-        <div class="footer-socials-group">
-          <span class="footer-heading">Connect</span>
-          <div class="footer-social-icons">
-            <a href="https://github.com/YOUR_GITHUB_USERNAME" class="footer-social-link" target="_blank"
-              rel="noopener noreferrer" aria-label="Mohamed Zakaria GitHub">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="none"
-                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                aria-hidden="true">
-                <path
-                  d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
-                </path>
+          <div class="footer-socials-group">
+            <span class="footer-heading">Connect</span>
+            <div class="footer-social-icons">
+              <a
+                href="https://github.com/YOUR_GITHUB_USERNAME"
+                class="footer-social-link"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Mohamed Zakaria GitHub"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  width="20"
+                  height="20"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"
+                  ></path>
+                </svg>
+              </a>
+              <a
+                href="https://linkedin.com/in/YOUR_LINKEDIN_USERNAME"
+                class="footer-social-link"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Mohamed Zakaria LinkedIn"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  width="20"
+                  height="20"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"
+                  ></path>
+                  <rect x="2" y="9" width="4" height="12"></rect>
+                  <circle cx="4" cy="4" r="2"></circle>
+                </svg>
+              </a>
+              <a
+                href="mailto:YOUR_EMAIL@gmail.com"
+                class="footer-social-link"
+                aria-label="Mohamed Zakaria Gmail"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  width="20"
+                  height="20"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+                  ></path>
+                  <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+              </a>
+            </div>
+            <a
+              href="#home"
+              class="back-to-top-btn"
+              id="back-to-top-btn"
+              aria-label="Scroll back to top of page"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                width="16"
+                height="16"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <line x1="12" y1="19" x2="12" y2="5"></line>
+                <polyline points="5 12 12 5 19 12"></polyline>
               </svg>
-            </a>
-            <a href="https://linkedin.com/in/YOUR_LINKEDIN_USERNAME" class="footer-social-link" target="_blank"
-              rel="noopener noreferrer" aria-label="Mohamed Zakaria LinkedIn">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="none"
-                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                aria-hidden="true">
-                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
-                <rect x="2" y="9" width="4" height="12"></rect>
-                <circle cx="4" cy="4" r="2"></circle>
-              </svg>
-            </a>
-            <a href="mailto:YOUR_EMAIL@gmail.com" class="footer-social-link" aria-label="Mohamed Zakaria Gmail">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="none"
-                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                aria-hidden="true">
-                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-                <polyline points="22,6 12,13 2,6"></polyline>
-              </svg>
+              <span>Back to top</span>
             </a>
           </div>
-          <a href="#home" class="back-to-top-btn" id="back-to-top-btn" aria-label="Scroll back to top of page">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" fill="none"
-              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <line x1="12" y1="19" x2="12" y2="5"></line>
-              <polyline points="5 12 12 5 19 12"></polyline>
-            </svg>
-            <span>Back to top</span>
-          </a>
+        </div>
+
+        <div class="footer-bottom">
+          <p class="copyright-text">
+            &copy; <span id="current-year">2026</span> Mohamed Zakaria. All
+            rights reserved.
+          </p>
+          <p class="footer-subtext">
+            Designed with semantic HTML5, modern CSS3 &amp; vanilla JavaScript.
+          </p>
         </div>
       </div>
+    </footer>
 
-      <div class="footer-bottom">
-        <p class="copyright-text">
-          &copy; <span id="current-year">2026</span> Mohamed Zakaria. All rights reserved.
-        </p>
-        <p class="footer-subtext">
-          Designed with semantic HTML5, modern CSS3 &amp; vanilla JavaScript.
-        </p>
-      </div>
-    </div>
-  </footer>
-
-  <!-- =========================================================================
+    <!-- =========================================================================
        PROJECT DETAILS MODAL (Interactive preview dialog)
        ========================================================================= -->
-  <dialog class="project-modal" id="project-modal" aria-labelledby="modal-title" aria-modal="true">
-    <div class="modal-box">
-      <button type="button" class="modal-close-btn" id="modal-close-btn" aria-label="Close project details modal">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="none"
-          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-          <line x1="18" y1="6" x2="6" y2="18"></line>
-          <line x1="6" y1="6" x2="18" y2="18"></line>
-        </svg>
-      </button>
+    <dialog
+      class="project-modal"
+      id="project-modal"
+      aria-labelledby="modal-title"
+      aria-modal="true"
+    >
+      <div class="modal-box">
+        <button
+          type="button"
+          class="modal-close-btn"
+          id="modal-close-btn"
+          aria-label="Close project details modal"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            width="20"
+            height="20"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
 
-      <div class="modal-content" id="modal-content">
-        <!-- Injected dynamically by script.js -->
+        <div class="modal-content" id="modal-content">
+          <!-- Injected dynamically by script.js -->
+        </div>
       </div>
-    </div>
-  </dialog>
+    </dialog>
 
-  <!-- =========================================================================
+    <!-- =========================================================================
        TOAST NOTIFICATION (Copy feedback, etc.)
        ========================================================================= -->
-  <div class="toast-container" id="toast-container" aria-live="polite" aria-atomic="true"></div>
+    <div
+      class="toast-container"
+      id="toast-container"
+      aria-live="polite"
+      aria-atomic="true"
+    ></div>
 
-  <!-- JavaScript -->
-  <script src="script.js"></script>
-</body>
-
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+  </body>
 </html>
